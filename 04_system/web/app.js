@@ -143,6 +143,10 @@ function loadShpCached(zipPath) {
   return state.shpCache.get(zipPath);
 }
 
+function bboxesIntersect(a, b) {
+  return a[0] <= b[2] && a[2] >= b[0] && a[1] <= b[3] && a[3] >= b[1];
+}
+
 function isSubwayRowInService(row) {
   const begin = String(row.effective_begin || row.begin || "").trim();
   return !begin || begin <= SUBWAY_SERVICE_CUTOFF;
@@ -277,23 +281,36 @@ async function loadTractsForIsochrone(areaKey) {
   const scope = state.data.isochrone_sgis || {};
   const stats = await loadJson(scope.tract_stats || "02_data/processed/sgis/isochrone_tract_stats.json");
   const statByTract = new Map(stats.tracts.map((row) => [row.tract, row]));
-  const shpZips = scope.shp_zips || [
-    "02_data/raw/sgis/census_tract_shp/bnd_oa_31023_2025_2Q.zip",
-    "02_data/raw/sgis/census_tract_shp/bnd_oa_31240_2025_2Q.zip",
-  ];
-  const geojsons = await Promise.all(shpZips.map((zipPath) => loadShpCached(zipPath)));
-  const features = geojsons.flatMap((result) => {
-    const geojson = Array.isArray(result) ? result[0] : result;
-    return geojson?.features || [];
-  });
+  let features = [];
+  const tractGeometries = scope.tract_geometries || scope.tract_boundaries;
+  if (tractGeometries) {
+    const geometries = await loadJson(tractGeometries);
+    features = geometries.features || [];
+  } else {
+    const shpZips = scope.shp_zips || [
+      "02_data/raw/sgis/census_tract_shp/bnd_oa_31023_2025_2Q.zip",
+      "02_data/raw/sgis/census_tract_shp/bnd_oa_31240_2025_2Q.zip",
+    ];
+    const geojsons = await Promise.all(shpZips.map((zipPath) => loadShpCached(zipPath)));
+    features = geojsons.flatMap((result) => {
+      const geojson = Array.isArray(result) ? result[0] : result;
+      return geojson?.features || [];
+    });
+  }
 
   state.isochroneTracts[cacheKey] = features.map((feature) => {
     const code =
       feature.properties?.TOT_OA_CD ||
       feature.properties?.tot_oa_cd ||
+      feature.properties?.tract_code ||
+      feature.properties?.adm_cd ||
       feature.properties?.OA_CD ||
       feature.properties?.oa_cd;
     const row = statByTract.get(code) || {};
+    let bbox = null;
+    try {
+      bbox = turf.bbox(feature);
+    } catch {}
     return {
       ...feature,
       properties: {
@@ -301,6 +318,7 @@ async function loadTractsForIsochrone(areaKey) {
         tract_code: code,
         population: num(row.population),
         workers: num(row.workers),
+        _bbox: bbox,
       },
     };
   });
@@ -309,10 +327,17 @@ async function loadTractsForIsochrone(areaKey) {
 
 async function summarizeIsochroneReach(areaKey, isochroneGeoJson, stationCount) {
   const tracts = await loadTractsForIsochrone(areaKey);
+  const isochroneBbox = turf.bbox(isochroneGeoJson);
   const matched = [];
   for (const tract of tracts) {
     try {
-      if (turf.booleanIntersects(tract, isochroneGeoJson)) {
+      if (tract.properties._bbox && !bboxesIntersect(tract.properties._bbox, isochroneBbox)) {
+        continue;
+      }
+      const isMatch = tract.geometry?.type === "Point"
+        ? turf.booleanPointInPolygon(tract, isochroneGeoJson)
+        : turf.booleanIntersects(tract, isochroneGeoJson);
+      if (isMatch) {
         matched.push(tract);
       }
     } catch {}
@@ -1266,7 +1291,23 @@ function accessText(areaKey, minutes) {
   if (pop == null || workers == null || stations == null) {
     return "지도모드 등시간권에서<br>먼저 계산 필요";
   }
-  return `역 ${fmt(stations)}개<br>인구 ${fmt(pop)}명<br>종사자 ${fmt(workers)}명`;
+  return `역 ${fmt(stations)}개<br>집계 인구 ${fmt(pop)}명<br>집계 종사자 ${fmt(workers)}명`;
+}
+
+function isochroneSgisScopeLabel() {
+  const scope = state.data?.isochrone_sgis?.scope || [];
+  const scopeNames = state.data?.isochrone_sgis?.scope_names || [];
+  if (scopeNames.length > 2) {
+    return `확장 SGIS ${scopeNames.length}개 시군구 집계구`;
+  }
+  if (scope.length === 2 && scope.includes("31023") && scope.includes("31240")) {
+    return "SGIS 성남시·화성시 집계구 한정";
+  }
+  return scope.length ? `SGIS 집계구 ${scope.join(", ")} 한정` : "SGIS 집계구";
+}
+
+function isochroneSourceMeta() {
+  return `출처: 지하철 네트워크 + ${isochroneSgisScopeLabel()}`;
 }
 
 function compareValue(title, value, note = "", meta = "") {
@@ -1667,19 +1708,19 @@ async function renderCompareTable() {
       },
       {
         metric: "30분 접근성",
-        pangyo: compareValue("도달 규모", accessText("pangyo_phase1", 30), "", "출처: 지하철 네트워크 + SGIS"),
-        dongtan: compareValue("도달 규모", accessText("dongtan_techno_valley", 30), "", "출처: 지하철 네트워크 + SGIS"),
+        pangyo: compareValue("집계 범위 내 도달 규모", accessText("pangyo_phase1", 30), "", isochroneSourceMeta()),
+        dongtan: compareValue("집계 범위 내 도달 규모", accessText("dongtan_techno_valley", 30), "", isochroneSourceMeta()),
         detail: compareDetail(
-          "중심역에서 지하철 네트워크로 30분 이내 도달 가능한 역을 찾고, 각 역 1km 버퍼와 교차하는 집계구의 인구·종사자를 합산했습니다.",
+          `중심역에서 지하철 네트워크로 30분 이내 도달 가능한 역을 찾고, 각 역 1km 버퍼와 교차하는 ${isochroneSgisScopeLabel()}의 인구·종사자를 합산했습니다. 현재 로컬 SGIS 범위 밖의 서울·용인·수원 등 도달지는 통계 합산에서 제외됩니다.`,
           accessDetailChart(30)
         ),
       },
       {
         metric: "60분 접근성",
-        pangyo: compareValue("도달 규모", accessText("pangyo_phase1", 60), "", "출처: 지하철 네트워크 + SGIS"),
-        dongtan: compareValue("도달 규모", accessText("dongtan_techno_valley", 60), "", "출처: 지하철 네트워크 + SGIS"),
+        pangyo: compareValue("집계 범위 내 도달 규모", accessText("pangyo_phase1", 60), "", isochroneSourceMeta()),
+        dongtan: compareValue("집계 범위 내 도달 규모", accessText("dongtan_techno_valley", 60), "", isochroneSourceMeta()),
         detail: compareDetail(
-          "60분권은 중심역에서 60분 이내로 도달 가능한 역과 그 주변 집계구의 인구·종사자를 합산한 값입니다.",
+          `60분권은 중심역에서 60분 이내로 도달 가능한 역과 그 주변 ${isochroneSgisScopeLabel()}의 인구·종사자를 합산한 값입니다. 현재 로컬 SGIS 범위 밖의 서울·용인·수원 등 도달지는 통계 합산에서 제외됩니다.`,
           accessDetailChart(60)
         ),
       },
