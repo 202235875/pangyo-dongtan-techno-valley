@@ -12,6 +12,7 @@ const state = {
   modeLayers: {},
   activeModeLayer: {},
   currentMode: "building_use",
+  compareInputsPromise: null,
   shpCache: new Map(),
 };
 
@@ -532,7 +533,7 @@ async function showSubwayIsochrone(map, areaKey, minutes, controls = {}) {
     state.isochroneStats[areaKey].currentMinutes = minutes;
     state.isochroneStats[areaKey].values[minutes] = reachStats;
     renderIsochroneStatsPanel(areaKey);
-    ensureAccessibilityCurve(areaKey, network, starts);
+    renderCompareTable();
     buttons.forEach((button) => {
       button.classList.toggle("active", Number(button.dataset.minutes) === minutes);
     });
@@ -610,10 +611,6 @@ function setIsochroneModeActive(areaKey, active) {
   }
 
   if (layer && !ctx.map.hasLayer(layer)) layer.addTo(ctx.map);
-  if (controlState && !controlState.initialized) {
-    controlState.initialized = true;
-    setTimeout(() => showSubwayIsochrone(ctx.map, areaKey, 30, controlState.controls), 0);
-  }
 }
 
 function makeMap(id, center) {
@@ -1235,6 +1232,9 @@ async function buildingCompareStats(areaKey) {
 }
 
 function accessValue(areaKey, minutes, field) {
+  const values = state.isochroneStats?.[areaKey]?.values || {};
+  const direct = values[minutes];
+  if (direct && direct[field] != null) return direct[field];
   const curve = state.isochroneStats?.[areaKey]?.curve || [];
   const row = curve.find((point) => point.minutes === minutes);
   return row ? row[field] : null;
@@ -1431,8 +1431,10 @@ function renderCompletionTimelineSvg(pangyoYears = [], dongtanYears = []) {
 }
 
 function accessDetailChart(minutes) {
-  const p = state.isochroneStats?.pangyo_phase1?.curve?.find((point) => point.minutes === minutes);
-  const d = state.isochroneStats?.dongtan_techno_valley?.curve?.find((point) => point.minutes === minutes);
+  const p = state.isochroneStats?.pangyo_phase1?.values?.[minutes]
+    || state.isochroneStats?.pangyo_phase1?.curve?.find((point) => point.minutes === minutes);
+  const d = state.isochroneStats?.dongtan_techno_valley?.values?.[minutes]
+    || state.isochroneStats?.dongtan_techno_valley?.curve?.find((point) => point.minutes === minutes);
   if (!p || !d) return `<div class="detail-note">등시간권 계산 완료 후 자동 갱신됩니다.</div>`;
   return `
     ${metricComparisonChart(`${minutes}분 도달 역 수`, p.stationCount, d.stationCount, { suffix: "개" })}
@@ -1507,16 +1509,20 @@ async function renderCompareTable() {
   if (!body) return;
   body.innerHTML = `<tr><td colspan="4">비교 통계 계산 중</td></tr>`;
 
-  const [pLand, dLand, pBuild, dBuild, pTimeline, dTimeline, pIndustry, dIndustry] = await Promise.all([
-    landuseCompareStats("pangyo_phase1"),
-    landuseCompareStats("dongtan_techno_valley"),
-    buildingCompareStats("pangyo_phase1"),
-    buildingCompareStats("dongtan_techno_valley"),
-    completionTimelineStats("pangyo_phase1"),
-    completionTimelineStats("dongtan_techno_valley"),
-    industryWorkerStats("pangyo_phase1"),
-    industryWorkerStats("dongtan_techno_valley"),
-  ]);
+  if (!state.compareInputsPromise) {
+    state.compareInputsPromise = Promise.all([
+      landuseCompareStats("pangyo_phase1"),
+      landuseCompareStats("dongtan_techno_valley"),
+      buildingCompareStats("pangyo_phase1"),
+      buildingCompareStats("dongtan_techno_valley"),
+      completionTimelineStats("pangyo_phase1"),
+      completionTimelineStats("dongtan_techno_valley"),
+      industryWorkerStats("pangyo_phase1"),
+      industryWorkerStats("dongtan_techno_valley"),
+    ]);
+  }
+  const [pLand, dLand, pBuild, dBuild, pTimeline, dTimeline, pIndustry, dIndustry] =
+    await state.compareInputsPromise;
   const pMetric = state.metrics.pangyo_phase1;
   const dMetric = state.metrics.dongtan_techno_valley;
   const farBars = compareDualBar(pBuild.avgFar, dBuild.avgFar, "%", 1);
