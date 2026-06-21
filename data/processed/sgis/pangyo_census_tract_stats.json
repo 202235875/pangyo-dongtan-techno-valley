@@ -1,0 +1,4638 @@
+{
+  "source_files": {
+    "population": "31023_2020년_인구총괄(총인구).csv",
+    "workers": "31023_2020년_산업분류별(10차_대분류)_총괄종사자수.csv"
+  },
+  "tracts": [
+    {
+      "tract": "31023510010001",
+      "population": 602,
+      "workers": 71
+    },
+    {
+      "tract": "31023510010002",
+      "population": 668,
+      "workers": 287
+    },
+    {
+      "tract": "31023510020001",
+      "population": 395,
+      "workers": 139
+    },
+    {
+      "tract": "31023510030001",
+      "population": 816,
+      "workers": 28
+    },
+    {
+      "tract": "31023510040001",
+      "population": 622,
+      "workers": 45
+    },
+    {
+      "tract": "31023510040002",
+      "population": 405,
+      "workers": 28
+    },
+    {
+      "tract": "31023510040003",
+      "population": 521,
+      "workers": 26
+    },
+    {
+      "tract": "31023510040004",
+      "population": 715,
+      "workers": 1010
+    },
+    {
+      "tract": "31023510040005",
+      "population": 454,
+      "workers": 50
+    },
+    {
+      "tract": "31023510040006",
+      "population": 852,
+      "workers": 159
+    },
+    {
+      "tract": "31023510040007",
+      "population": 728,
+      "workers": 24
+    },
+    {
+      "tract": "31023510040008",
+      "population": 477,
+      "workers": 163
+    },
+    {
+      "tract": "31023510040009",
+      "population": 592,
+      "workers": 71
+    },
+    {
+      "tract": "31023510040010",
+      "population": 604,
+      "workers": 32
+    },
+    {
+      "tract": "31023510040011",
+      "population": 368,
+      "workers": 34
+    },
+    {
+      "tract": "31023510040012",
+      "population": 389,
+      "workers": 96
+    },
+    {
+      "tract": "31023510040013",
+      "population": 481,
+      "workers": 417
+    },
+    {
+      "tract": "31023510040014",
+      "population": 383,
+      "workers": 17
+    },
+    {
+      "tract": "31023510040015",
+      "population": 503,
+      "workers": 38
+    },
+    {
+      "tract": "31023510040016",
+      "population": 373,
+      "workers": 17
+    },
+    {
+      "tract": "31023510040018",
+      "population": 319,
+      "workers": 17
+    },
+    {
+      "tract": "31023510040101",
+      "population": 421,
+      "workers": 14
+    },
+    {
+      "tract": "31023510040102",
+      "population": 572,
+      "workers": 27
+    },
+    {
+      "tract": "31023510040201",
+      "population": 449,
+      "workers": 1
+    },
+    {
+      "tract": "31023510040202",
+      "population": 396,
+      "workers": 14
+    },
+    {
+      "tract": "31023510040203",
+      "population": 450,
+      "workers": 7
+    },
+    {
+      "tract": "31023510040301",
+      "population": 339,
+      "workers": 106
+    },
+    {
+      "tract": "31023510040401",
+      "population": 626,
+      "workers": 9
+    },
+    {
+      "tract": "31023510040501",
+      "population": 595,
+      "workers": 5
+    },
+    {
+      "tract": "31023510040502",
+      "population": 443,
+      "workers": 13
+    },
+    {
+      "tract": "31023510040601",
+      "population": 659,
+      "workers": 7
+    },
+    {
+      "tract": "31023510050001",
+      "population": 0,
+      "workers": 71
+    },
+    {
+      "tract": "31023510050101",
+      "population": 559,
+      "workers": 40
+    },
+    {
+      "tract": "31023510050102",
+      "population": 655,
+      "workers": 9
+    },
+    {
+      "tract": "31023510050103",
+      "population": 628,
+      "workers": 11
+    },
+    {
+      "tract": "31023510050104",
+      "population": 640,
+      "workers": 25
+    },
+    {
+      "tract": "31023510050201",
+      "population": 420,
+      "workers": 4
+    },
+    {
+      "tract": "31023510050202",
+      "population": 544,
+      "workers": 7
+    },
+    {
+      "tract": "31023510050203",
+      "population": 466,
+      "workers": 37
+    },
+    {
+      "tract": "31023510050204",
+      "population": 426,
+      "workers": 13
+    },
+    {
+      "tract": "31023510050301",
+      "population": 473,
+      "workers": 19
+    },
+    {
+      "tract": "31023510050302",
+      "population": 619,
+      "workers": 7
+    },
+    {
+      "tract": "31023510050303",
+      "population": 510,
+      "workers": 86
+    },
+    {
+      "tract": "31023510050304",
+      "population": 449,
+      "workers": 11
+    },
+    {
+      "tract": "31023510050305",
+      "population": 498,
+      "workers": 16
+    },
+    {
+      "tract": "31023510050401",
+      "population": 520,
+      "workers": 4
+    },
+    {
+      "tract": "31023510050402",
+      "population": 412,
+      "workers": 7
+    },
+    {
+      "tract": "31023510050403",
+      "population": 500,
+      "workers": 23
+    },
+    {
+      "tract": "31023510050404",
+      "population": 445,
+      "workers": 59
+    },
+    {
+      "tract": "31023520010003",
+      "population": 0,
+      "workers": 103
+    },
+    {
+      "tract": "31023520010004",
+      "population": 0,
+      "workers": 31
+    },
+    {
+      "tract": "31023520010005",
+      "population": 0,
+      "workers": 96
+    },
+    {
+      "tract": "31023520010101",
+      "population": 609,
+      "workers": 10
+    },
+    {
+      "tract": "31023520010102",
+      "population": 492,
+      "workers": 3
+    },
+    {
+      "tract": "31023520010103",
+      "population": 637,
+      "workers": 8
+    },
+    {
+      "tract": "31023520010104",
+      "population": 510,
+      "workers": 159
+    },
+    {
+      "tract": "31023520010105",
+      "population": 621,
+      "workers": 5
+    },
+    {
+      "tract": "31023520010106",
+      "population": 480,
+      "workers": 11
+    },
+    {
+      "tract": "31023520010107",
+      "population": 456,
+      "workers": 3
+    },
+    {
+      "tract": "31023520010108",
+      "population": 483,
+      "workers": 22
+    },
+    {
+      "tract": "31023520010201",
+      "population": 489,
+      "workers": 23
+    },
+    {
+      "tract": "31023520010202",
+      "population": 447,
+      "workers": 5
+    },
+    {
+      "tract": "31023520010203",
+      "population": 561,
+      "workers": 8
+    },
+    {
+      "tract": "31023520010204",
+      "population": 491,
+      "workers": 6
+    },
+    {
+      "tract": "31023520010301",
+      "population": 485,
+      "workers": 8
+    },
+    {
+      "tract": "31023520010302",
+      "population": 420,
+      "workers": 7
+    },
+    {
+      "tract": "31023520010303",
+      "population": 539,
+      "workers": 4
+    },
+    {
+      "tract": "31023520010401",
+      "population": 583,
+      "workers": 534
+    },
+    {
+      "tract": "31023520010402",
+      "population": 529,
+      "workers": 438
+    },
+    {
+      "tract": "31023520020001",
+      "population": 612,
+      "workers": 94
+    },
+    {
+      "tract": "31023520020002",
+      "population": 540,
+      "workers": 60
+    },
+    {
+      "tract": "31023520020003",
+      "population": 629,
+      "workers": 94
+    },
+    {
+      "tract": "31023520020004",
+      "population": 544,
+      "workers": 44
+    },
+    {
+      "tract": "31023520020005",
+      "population": 627,
+      "workers": 647
+    },
+    {
+      "tract": "31023520020006",
+      "population": 532,
+      "workers": 17
+    },
+    {
+      "tract": "31023520020007",
+      "population": 544,
+      "workers": 49
+    },
+    {
+      "tract": "31023520020008",
+      "population": 494,
+      "workers": 39
+    },
+    {
+      "tract": "31023530020001",
+      "population": 0,
+      "workers": 807
+    },
+    {
+      "tract": "31023530030001",
+      "population": 812,
+      "workers": 2375
+    },
+    {
+      "tract": "31023530030002",
+      "population": 379,
+      "workers": 4901
+    },
+    {
+      "tract": "31023530030003",
+      "population": 370,
+      "workers": 2901
+    },
+    {
+      "tract": "31023530030004",
+      "population": 1104,
+      "workers": 2731
+    },
+    {
+      "tract": "31023530030005",
+      "population": 828,
+      "workers": 4220
+    },
+    {
+      "tract": "31023530030006",
+      "population": 1425,
+      "workers": 3029
+    },
+    {
+      "tract": "31023530030101",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023530040003",
+      "population": 0,
+      "workers": 517
+    },
+    {
+      "tract": "31023530040101",
+      "population": 612,
+      "workers": 21
+    },
+    {
+      "tract": "31023530040102",
+      "population": 440,
+      "workers": 23
+    },
+    {
+      "tract": "31023530040103",
+      "population": 456,
+      "workers": 5
+    },
+    {
+      "tract": "31023530040104",
+      "population": 512,
+      "workers": 7
+    },
+    {
+      "tract": "31023530040105",
+      "population": 627,
+      "workers": 14
+    },
+    {
+      "tract": "31023530040201",
+      "population": 620,
+      "workers": 103
+    },
+    {
+      "tract": "31023530040202",
+      "population": 527,
+      "workers": 11
+    },
+    {
+      "tract": "31023530040203",
+      "population": 578,
+      "workers": 3
+    },
+    {
+      "tract": "31023530040204",
+      "population": 499,
+      "workers": 7
+    },
+    {
+      "tract": "31023530040205",
+      "population": 497,
+      "workers": 4
+    },
+    {
+      "tract": "31023530040206",
+      "population": 586,
+      "workers": 254
+    },
+    {
+      "tract": "31023530040207",
+      "population": 494,
+      "workers": 5
+    },
+    {
+      "tract": "31023530040208",
+      "population": 623,
+      "workers": 4
+    },
+    {
+      "tract": "31023530040209",
+      "population": 506,
+      "workers": 76
+    },
+    {
+      "tract": "31023530040210",
+      "population": 491,
+      "workers": 15
+    },
+    {
+      "tract": "31023530040211",
+      "population": 444,
+      "workers": 20
+    },
+    {
+      "tract": "31023530040301",
+      "population": 498,
+      "workers": 21
+    },
+    {
+      "tract": "31023530040302",
+      "population": 459,
+      "workers": 27
+    },
+    {
+      "tract": "31023530040303",
+      "population": 461,
+      "workers": 5
+    },
+    {
+      "tract": "31023530040304",
+      "population": 523,
+      "workers": 8
+    },
+    {
+      "tract": "31023530040305",
+      "population": 531,
+      "workers": 33
+    },
+    {
+      "tract": "31023530040306",
+      "population": 626,
+      "workers": 23
+    },
+    {
+      "tract": "31023530040401",
+      "population": 701,
+      "workers": 973
+    },
+    {
+      "tract": "31023540010001",
+      "population": 0,
+      "workers": 8
+    },
+    {
+      "tract": "31023540010002",
+      "population": 0,
+      "workers": 326
+    },
+    {
+      "tract": "31023540010004",
+      "population": 0,
+      "workers": 424
+    },
+    {
+      "tract": "31023540010005",
+      "population": 0,
+      "workers": 92
+    },
+    {
+      "tract": "31023540010101",
+      "population": 547,
+      "workers": 7
+    },
+    {
+      "tract": "31023540010102",
+      "population": 533,
+      "workers": 8
+    },
+    {
+      "tract": "31023540010103",
+      "population": 540,
+      "workers": 4
+    },
+    {
+      "tract": "31023540010104",
+      "population": 470,
+      "workers": 4
+    },
+    {
+      "tract": "31023540010105",
+      "population": 522,
+      "workers": 9
+    },
+    {
+      "tract": "31023540010106",
+      "population": 547,
+      "workers": 12
+    },
+    {
+      "tract": "31023540010107",
+      "population": 540,
+      "workers": 12
+    },
+    {
+      "tract": "31023540010108",
+      "population": 550,
+      "workers": 21
+    },
+    {
+      "tract": "31023540010109",
+      "population": 502,
+      "workers": 4
+    },
+    {
+      "tract": "31023540010110",
+      "population": 571,
+      "workers": 18
+    },
+    {
+      "tract": "31023540010111",
+      "population": 555,
+      "workers": 5
+    },
+    {
+      "tract": "31023540010112",
+      "population": 507,
+      "workers": 3
+    },
+    {
+      "tract": "31023540010113",
+      "population": 526,
+      "workers": 7
+    },
+    {
+      "tract": "31023540010114",
+      "population": 707,
+      "workers": 158
+    },
+    {
+      "tract": "31023540010115",
+      "population": 502,
+      "workers": 21
+    },
+    {
+      "tract": "31023540010116",
+      "population": 333,
+      "workers": 6
+    },
+    {
+      "tract": "31023540010117",
+      "population": 547,
+      "workers": 16
+    },
+    {
+      "tract": "31023540010201",
+      "population": 518,
+      "workers": 370
+    },
+    {
+      "tract": "31023540010301",
+      "population": 517,
+      "workers": 258
+    },
+    {
+      "tract": "31023550010001",
+      "population": 0,
+      "workers": 58
+    },
+    {
+      "tract": "31023550010002",
+      "population": 0,
+      "workers": 323
+    },
+    {
+      "tract": "31023550010101",
+      "population": 758,
+      "workers": 100
+    },
+    {
+      "tract": "31023550010102",
+      "population": 563,
+      "workers": 7
+    },
+    {
+      "tract": "31023550010103",
+      "population": 470,
+      "workers": 24
+    },
+    {
+      "tract": "31023550010104",
+      "population": 568,
+      "workers": 4
+    },
+    {
+      "tract": "31023550010105",
+      "population": 638,
+      "workers": 2
+    },
+    {
+      "tract": "31023550010106",
+      "population": 566,
+      "workers": 81
+    },
+    {
+      "tract": "31023550010107",
+      "population": 547,
+      "workers": 26
+    },
+    {
+      "tract": "31023550010108",
+      "population": 529,
+      "workers": 30
+    },
+    {
+      "tract": "31023550010109",
+      "population": 558,
+      "workers": 8
+    },
+    {
+      "tract": "31023550010201",
+      "population": 456,
+      "workers": 70
+    },
+    {
+      "tract": "31023550010202",
+      "population": 538,
+      "workers": 8
+    },
+    {
+      "tract": "31023550010203",
+      "population": 610,
+      "workers": 6
+    },
+    {
+      "tract": "31023550010204",
+      "population": 452,
+      "workers": 9
+    },
+    {
+      "tract": "31023550010301",
+      "population": 543,
+      "workers": 11
+    },
+    {
+      "tract": "31023550010302",
+      "population": 577,
+      "workers": 72
+    },
+    {
+      "tract": "31023550010303",
+      "population": 648,
+      "workers": 8
+    },
+    {
+      "tract": "31023550010304",
+      "population": 532,
+      "workers": 17
+    },
+    {
+      "tract": "31023550020101",
+      "population": 569,
+      "workers": 42
+    },
+    {
+      "tract": "31023550020102",
+      "population": 488,
+      "workers": 51
+    },
+    {
+      "tract": "31023550020103",
+      "population": 574,
+      "workers": 5
+    },
+    {
+      "tract": "31023550020104",
+      "population": 401,
+      "workers": 9
+    },
+    {
+      "tract": "31023550020105",
+      "population": 440,
+      "workers": 71
+    },
+    {
+      "tract": "31023550020201",
+      "population": 542,
+      "workers": 14
+    },
+    {
+      "tract": "31023550020202",
+      "population": 573,
+      "workers": 4
+    },
+    {
+      "tract": "31023550020203",
+      "population": 480,
+      "workers": 73
+    },
+    {
+      "tract": "31023550020204",
+      "population": 545,
+      "workers": 21
+    },
+    {
+      "tract": "31023550020205",
+      "population": 496,
+      "workers": 30
+    },
+    {
+      "tract": "31023550020206",
+      "population": 597,
+      "workers": 19
+    },
+    {
+      "tract": "31023560010101",
+      "population": 623,
+      "workers": 28
+    },
+    {
+      "tract": "31023560010102",
+      "population": 470,
+      "workers": 33
+    },
+    {
+      "tract": "31023560010103",
+      "population": 436,
+      "workers": 21
+    },
+    {
+      "tract": "31023560010104",
+      "population": 583,
+      "workers": 33
+    },
+    {
+      "tract": "31023560010105",
+      "population": 629,
+      "workers": 191
+    },
+    {
+      "tract": "31023560010106",
+      "population": 527,
+      "workers": 11
+    },
+    {
+      "tract": "31023560010107",
+      "population": 469,
+      "workers": 10
+    },
+    {
+      "tract": "31023560010201",
+      "population": 447,
+      "workers": 15
+    },
+    {
+      "tract": "31023560010202",
+      "population": 409,
+      "workers": 86
+    },
+    {
+      "tract": "31023560010203",
+      "population": 548,
+      "workers": 13
+    },
+    {
+      "tract": "31023560010204",
+      "population": 509,
+      "workers": 36
+    },
+    {
+      "tract": "31023560020001",
+      "population": 532,
+      "workers": 32
+    },
+    {
+      "tract": "31023560020002",
+      "population": 557,
+      "workers": 116
+    },
+    {
+      "tract": "31023560020003",
+      "population": 530,
+      "workers": 13
+    },
+    {
+      "tract": "31023560020004",
+      "population": 460,
+      "workers": 659
+    },
+    {
+      "tract": "31023560020005",
+      "population": 515,
+      "workers": 351
+    },
+    {
+      "tract": "31023560020006",
+      "population": 458,
+      "workers": 213
+    },
+    {
+      "tract": "31023560020007",
+      "population": 495,
+      "workers": 47
+    },
+    {
+      "tract": "31023560030001",
+      "population": 256,
+      "workers": 1871
+    },
+    {
+      "tract": "31023560030002",
+      "population": 0,
+      "workers": 46
+    },
+    {
+      "tract": "31023560030101",
+      "population": 426,
+      "workers": 3
+    },
+    {
+      "tract": "31023560030102",
+      "population": 500,
+      "workers": 79
+    },
+    {
+      "tract": "31023560030103",
+      "population": 610,
+      "workers": 19
+    },
+    {
+      "tract": "31023560030201",
+      "population": 495,
+      "workers": 11
+    },
+    {
+      "tract": "31023560030202",
+      "population": 640,
+      "workers": 74
+    },
+    {
+      "tract": "31023560030203",
+      "population": 584,
+      "workers": 42
+    },
+    {
+      "tract": "31023560030204",
+      "population": 488,
+      "workers": 26
+    },
+    {
+      "tract": "31023560030205",
+      "population": 440,
+      "workers": 44
+    },
+    {
+      "tract": "31023560030206",
+      "population": 620,
+      "workers": 69
+    },
+    {
+      "tract": "31023560030207",
+      "population": 516,
+      "workers": 5
+    },
+    {
+      "tract": "31023560030301",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023560030302",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023560030303",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023580010001",
+      "population": 629,
+      "workers": 227
+    },
+    {
+      "tract": "31023580010002",
+      "population": 573,
+      "workers": 1123
+    },
+    {
+      "tract": "31023580010003",
+      "population": 856,
+      "workers": 735
+    },
+    {
+      "tract": "31023580020001",
+      "population": 368,
+      "workers": 383
+    },
+    {
+      "tract": "31023580020002",
+      "population": 783,
+      "workers": 233
+    },
+    {
+      "tract": "31023580020003",
+      "population": 396,
+      "workers": 243
+    },
+    {
+      "tract": "31023580030001",
+      "population": 633,
+      "workers": 2598
+    },
+    {
+      "tract": "31023580030002",
+      "population": 406,
+      "workers": 13757
+    },
+    {
+      "tract": "31023580030003",
+      "population": 334,
+      "workers": 6875
+    },
+    {
+      "tract": "31023580030004",
+      "population": 2242,
+      "workers": 3365
+    },
+    {
+      "tract": "31023580040001",
+      "population": 140,
+      "workers": 1168
+    },
+    {
+      "tract": "31023580040002",
+      "population": 1,
+      "workers": 97
+    },
+    {
+      "tract": "31023580040101",
+      "population": 503,
+      "workers": 10
+    },
+    {
+      "tract": "31023580040102",
+      "population": 565,
+      "workers": 4
+    },
+    {
+      "tract": "31023580040103",
+      "population": 467,
+      "workers": 16
+    },
+    {
+      "tract": "31023580040104",
+      "population": 376,
+      "workers": 2
+    },
+    {
+      "tract": "31023580040105",
+      "population": 645,
+      "workers": 24
+    },
+    {
+      "tract": "31023580040106",
+      "population": 507,
+      "workers": 1
+    },
+    {
+      "tract": "31023580040107",
+      "population": 609,
+      "workers": 7
+    },
+    {
+      "tract": "31023580040108",
+      "population": 592,
+      "workers": 21
+    },
+    {
+      "tract": "31023580040109",
+      "population": 560,
+      "workers": 38
+    },
+    {
+      "tract": "31023580040110",
+      "population": 479,
+      "workers": 3
+    },
+    {
+      "tract": "31023580040111",
+      "population": 509,
+      "workers": 12
+    },
+    {
+      "tract": "31023580040112",
+      "population": 443,
+      "workers": 5
+    },
+    {
+      "tract": "31023580040201",
+      "population": 616,
+      "workers": 12
+    },
+    {
+      "tract": "31023580040202",
+      "population": 557,
+      "workers": 4
+    },
+    {
+      "tract": "31023580040203",
+      "population": 453,
+      "workers": 4
+    },
+    {
+      "tract": "31023580040204",
+      "population": 466,
+      "workers": 7
+    },
+    {
+      "tract": "31023580040205",
+      "population": 518,
+      "workers": 10
+    },
+    {
+      "tract": "31023580040206",
+      "population": 564,
+      "workers": 6
+    },
+    {
+      "tract": "31023580040207",
+      "population": 472,
+      "workers": 67
+    },
+    {
+      "tract": "31023580040208",
+      "population": 506,
+      "workers": 10
+    },
+    {
+      "tract": "31023580040209",
+      "population": 579,
+      "workers": 1
+    },
+    {
+      "tract": "31023580040210",
+      "population": 480,
+      "workers": 7
+    },
+    {
+      "tract": "31023580040211",
+      "population": 441,
+      "workers": 3
+    },
+    {
+      "tract": "31023580050001",
+      "population": 28,
+      "workers": 1160
+    },
+    {
+      "tract": "31023580050002",
+      "population": 0,
+      "workers": 92
+    },
+    {
+      "tract": "31023580050101",
+      "population": 566,
+      "workers": 6
+    },
+    {
+      "tract": "31023580050102",
+      "population": 601,
+      "workers": 21
+    },
+    {
+      "tract": "31023580050103",
+      "population": 462,
+      "workers": 7
+    },
+    {
+      "tract": "31023580050104",
+      "population": 451,
+      "workers": 13
+    },
+    {
+      "tract": "31023580050105",
+      "population": 427,
+      "workers": 4
+    },
+    {
+      "tract": "31023580050106",
+      "population": 627,
+      "workers": 9
+    },
+    {
+      "tract": "31023580050107",
+      "population": 559,
+      "workers": 2
+    },
+    {
+      "tract": "31023580050108",
+      "population": 481,
+      "workers": 3
+    },
+    {
+      "tract": "31023580050109",
+      "population": 502,
+      "workers": 25
+    },
+    {
+      "tract": "31023580050110",
+      "population": 590,
+      "workers": 8
+    },
+    {
+      "tract": "31023580050111",
+      "population": 479,
+      "workers": 23
+    },
+    {
+      "tract": "31023580050201",
+      "population": 540,
+      "workers": 67
+    },
+    {
+      "tract": "31023580050202",
+      "population": 566,
+      "workers": 11
+    },
+    {
+      "tract": "31023580050203",
+      "population": 538,
+      "workers": 7
+    },
+    {
+      "tract": "31023580050204",
+      "population": 572,
+      "workers": 11
+    },
+    {
+      "tract": "31023580050205",
+      "population": 563,
+      "workers": 13
+    },
+    {
+      "tract": "31023580050206",
+      "population": 398,
+      "workers": 11
+    },
+    {
+      "tract": "31023580050207",
+      "population": 597,
+      "workers": 6
+    },
+    {
+      "tract": "31023580050208",
+      "population": 564,
+      "workers": 3
+    },
+    {
+      "tract": "31023580050209",
+      "population": 505,
+      "workers": 7
+    },
+    {
+      "tract": "31023580050210",
+      "population": 568,
+      "workers": 17
+    },
+    {
+      "tract": "31023590010001",
+      "population": 430,
+      "workers": 169
+    },
+    {
+      "tract": "31023590010002",
+      "population": 432,
+      "workers": 43
+    },
+    {
+      "tract": "31023590010003",
+      "population": 404,
+      "workers": 99
+    },
+    {
+      "tract": "31023590010004",
+      "population": 388,
+      "workers": 10
+    },
+    {
+      "tract": "31023590010005",
+      "population": 399,
+      "workers": 63
+    },
+    {
+      "tract": "31023590020101",
+      "population": 652,
+      "workers": 48
+    },
+    {
+      "tract": "31023590020102",
+      "population": 551,
+      "workers": 14
+    },
+    {
+      "tract": "31023590020103",
+      "population": 583,
+      "workers": 14
+    },
+    {
+      "tract": "31023590020104",
+      "population": 593,
+      "workers": 135
+    },
+    {
+      "tract": "31023590020201",
+      "population": 416,
+      "workers": 7
+    },
+    {
+      "tract": "31023590020202",
+      "population": 617,
+      "workers": 23
+    },
+    {
+      "tract": "31023590020203",
+      "population": 518,
+      "workers": 39
+    },
+    {
+      "tract": "31023590020204",
+      "population": 511,
+      "workers": 26
+    },
+    {
+      "tract": "31023590020205",
+      "population": 505,
+      "workers": 12
+    },
+    {
+      "tract": "31023590020206",
+      "population": 446,
+      "workers": 501
+    },
+    {
+      "tract": "31023590030001",
+      "population": 262,
+      "workers": 583
+    },
+    {
+      "tract": "31023590030101",
+      "population": 550,
+      "workers": 13
+    },
+    {
+      "tract": "31023590030102",
+      "population": 473,
+      "workers": 11
+    },
+    {
+      "tract": "31023590030103",
+      "population": 562,
+      "workers": 7
+    },
+    {
+      "tract": "31023590030104",
+      "population": 501,
+      "workers": 15
+    },
+    {
+      "tract": "31023590030105",
+      "population": 551,
+      "workers": 25
+    },
+    {
+      "tract": "31023590030106",
+      "population": 500,
+      "workers": 17
+    },
+    {
+      "tract": "31023590040001",
+      "population": 242,
+      "workers": 711
+    },
+    {
+      "tract": "31023590040101",
+      "population": 670,
+      "workers": 9
+    },
+    {
+      "tract": "31023590040102",
+      "population": 569,
+      "workers": 13
+    },
+    {
+      "tract": "31023590040103",
+      "population": 537,
+      "workers": 14
+    },
+    {
+      "tract": "31023590040104",
+      "population": 630,
+      "workers": 12
+    },
+    {
+      "tract": "31023590040105",
+      "population": 521,
+      "workers": 37
+    },
+    {
+      "tract": "31023590040301",
+      "population": 406,
+      "workers": 179
+    },
+    {
+      "tract": "31023590040401",
+      "population": 633,
+      "workers": 7
+    },
+    {
+      "tract": "31023590040402",
+      "population": 569,
+      "workers": 33
+    },
+    {
+      "tract": "31023590040403",
+      "population": 507,
+      "workers": 11
+    },
+    {
+      "tract": "31023590040404",
+      "population": 555,
+      "workers": 25
+    },
+    {
+      "tract": "31023590050001",
+      "population": 703,
+      "workers": 156
+    },
+    {
+      "tract": "31023590050002",
+      "population": 405,
+      "workers": 52
+    },
+    {
+      "tract": "31023600010001",
+      "population": 467,
+      "workers": 19
+    },
+    {
+      "tract": "31023600010002",
+      "population": 725,
+      "workers": 696
+    },
+    {
+      "tract": "31023600010003",
+      "population": 379,
+      "workers": 392
+    },
+    {
+      "tract": "31023600010004",
+      "population": 326,
+      "workers": 231
+    },
+    {
+      "tract": "31023600010005",
+      "population": 1080,
+      "workers": 53
+    },
+    {
+      "tract": "31023600010006",
+      "population": 419,
+      "workers": 10
+    },
+    {
+      "tract": "31023600010007",
+      "population": 685,
+      "workers": 50
+    },
+    {
+      "tract": "31023600010008",
+      "population": 339,
+      "workers": 18
+    },
+    {
+      "tract": "31023600010009",
+      "population": 386,
+      "workers": 268
+    },
+    {
+      "tract": "31023600020001",
+      "population": 241,
+      "workers": 2992
+    },
+    {
+      "tract": "31023600020101",
+      "population": 470,
+      "workers": 1
+    },
+    {
+      "tract": "31023600020102",
+      "population": 579,
+      "workers": 6
+    },
+    {
+      "tract": "31023600020103",
+      "population": 585,
+      "workers": 12
+    },
+    {
+      "tract": "31023600020104",
+      "population": 455,
+      "workers": 13
+    },
+    {
+      "tract": "31023600020105",
+      "population": 550,
+      "workers": 21
+    },
+    {
+      "tract": "31023600020106",
+      "population": 426,
+      "workers": 11
+    },
+    {
+      "tract": "31023600020107",
+      "population": 502,
+      "workers": 67
+    },
+    {
+      "tract": "31023600020108",
+      "population": 580,
+      "workers": 16
+    },
+    {
+      "tract": "31023600020109",
+      "population": 464,
+      "workers": 58
+    },
+    {
+      "tract": "31023600020110",
+      "population": 512,
+      "workers": 35
+    },
+    {
+      "tract": "31023600020111",
+      "population": 516,
+      "workers": 3
+    },
+    {
+      "tract": "31023600020112",
+      "population": 575,
+      "workers": 22
+    },
+    {
+      "tract": "31023600020113",
+      "population": 467,
+      "workers": 27
+    },
+    {
+      "tract": "31023600020114",
+      "population": 609,
+      "workers": 10
+    },
+    {
+      "tract": "31023600020115",
+      "population": 453,
+      "workers": 6
+    },
+    {
+      "tract": "31023600020116",
+      "population": 576,
+      "workers": 30
+    },
+    {
+      "tract": "31023600020117",
+      "population": 498,
+      "workers": 4
+    },
+    {
+      "tract": "31023600020118",
+      "population": 447,
+      "workers": 9
+    },
+    {
+      "tract": "31023600020119",
+      "population": 486,
+      "workers": 10
+    },
+    {
+      "tract": "31023600020120",
+      "population": 541,
+      "workers": 3
+    },
+    {
+      "tract": "31023600020121",
+      "population": 557,
+      "workers": 4
+    },
+    {
+      "tract": "31023600020122",
+      "population": 492,
+      "workers": 18
+    },
+    {
+      "tract": "31023600020123",
+      "population": 668,
+      "workers": 30
+    },
+    {
+      "tract": "31023600020124",
+      "population": 563,
+      "workers": 20
+    },
+    {
+      "tract": "31023600020125",
+      "population": 580,
+      "workers": 24
+    },
+    {
+      "tract": "31023600020126",
+      "population": 657,
+      "workers": 7
+    },
+    {
+      "tract": "31023600020127",
+      "population": 430,
+      "workers": 99
+    },
+    {
+      "tract": "31023600020201",
+      "population": 592,
+      "workers": 31
+    },
+    {
+      "tract": "31023600020202",
+      "population": 458,
+      "workers": 11
+    },
+    {
+      "tract": "31023600020203",
+      "population": 535,
+      "workers": 12
+    },
+    {
+      "tract": "31023600020204",
+      "population": 603,
+      "workers": 5
+    },
+    {
+      "tract": "31023600020205",
+      "population": 558,
+      "workers": 8
+    },
+    {
+      "tract": "31023600020206",
+      "population": 440,
+      "workers": 9
+    },
+    {
+      "tract": "31023600020207",
+      "population": 559,
+      "workers": 11
+    },
+    {
+      "tract": "31023600020208",
+      "population": 595,
+      "workers": 14
+    },
+    {
+      "tract": "31023600020209",
+      "population": 599,
+      "workers": 4
+    },
+    {
+      "tract": "31023600020210",
+      "population": 513,
+      "workers": 40
+    },
+    {
+      "tract": "31023610010101",
+      "population": 444,
+      "workers": 10
+    },
+    {
+      "tract": "31023610010102",
+      "population": 457,
+      "workers": 12
+    },
+    {
+      "tract": "31023610010103",
+      "population": 446,
+      "workers": 7
+    },
+    {
+      "tract": "31023610010104",
+      "population": 437,
+      "workers": 4
+    },
+    {
+      "tract": "31023610010105",
+      "population": 516,
+      "workers": 12
+    },
+    {
+      "tract": "31023610010106",
+      "population": 548,
+      "workers": 59
+    },
+    {
+      "tract": "31023610010107",
+      "population": 504,
+      "workers": 35
+    },
+    {
+      "tract": "31023610010108",
+      "population": 455,
+      "workers": 8
+    },
+    {
+      "tract": "31023610010109",
+      "population": 613,
+      "workers": 7
+    },
+    {
+      "tract": "31023610010201",
+      "population": 478,
+      "workers": 4
+    },
+    {
+      "tract": "31023610010202",
+      "population": 639,
+      "workers": 17
+    },
+    {
+      "tract": "31023610010203",
+      "population": 504,
+      "workers": 52
+    },
+    {
+      "tract": "31023610010204",
+      "population": 484,
+      "workers": 19
+    },
+    {
+      "tract": "31023610010205",
+      "population": 591,
+      "workers": 6
+    },
+    {
+      "tract": "31023610010206",
+      "population": 455,
+      "workers": 5
+    },
+    {
+      "tract": "31023610010207",
+      "population": 535,
+      "workers": 1220
+    },
+    {
+      "tract": "31023610020101",
+      "population": 590,
+      "workers": 18
+    },
+    {
+      "tract": "31023610020102",
+      "population": 403,
+      "workers": 30
+    },
+    {
+      "tract": "31023610020201",
+      "population": 478,
+      "workers": 18
+    },
+    {
+      "tract": "31023610020202",
+      "population": 686,
+      "workers": 1322
+    },
+    {
+      "tract": "31023610020301",
+      "population": 530,
+      "workers": 12
+    },
+    {
+      "tract": "31023610020302",
+      "population": 596,
+      "workers": 19
+    },
+    {
+      "tract": "31023610020303",
+      "population": 466,
+      "workers": 5
+    },
+    {
+      "tract": "31023610020304",
+      "population": 499,
+      "workers": 19
+    },
+    {
+      "tract": "31023610020305",
+      "population": 638,
+      "workers": 47
+    },
+    {
+      "tract": "31023620010001",
+      "population": 61,
+      "workers": 116
+    },
+    {
+      "tract": "31023620010101",
+      "population": 591,
+      "workers": 22
+    },
+    {
+      "tract": "31023620010102",
+      "population": 516,
+      "workers": 17
+    },
+    {
+      "tract": "31023620010103",
+      "population": 509,
+      "workers": 64
+    },
+    {
+      "tract": "31023620010104",
+      "population": 423,
+      "workers": 17
+    },
+    {
+      "tract": "31023620010105",
+      "population": 529,
+      "workers": 2
+    },
+    {
+      "tract": "31023620010106",
+      "population": 620,
+      "workers": 29
+    },
+    {
+      "tract": "31023620010107",
+      "population": 603,
+      "workers": 12
+    },
+    {
+      "tract": "31023620010108",
+      "population": 467,
+      "workers": 32
+    },
+    {
+      "tract": "31023620020001",
+      "population": 204,
+      "workers": 207
+    },
+    {
+      "tract": "31023620020002",
+      "population": 0,
+      "workers": 63
+    },
+    {
+      "tract": "31023620020101",
+      "population": 401,
+      "workers": 15
+    },
+    {
+      "tract": "31023620020102",
+      "population": 528,
+      "workers": 8
+    },
+    {
+      "tract": "31023620020103",
+      "population": 536,
+      "workers": 5
+    },
+    {
+      "tract": "31023620020104",
+      "population": 577,
+      "workers": 10
+    },
+    {
+      "tract": "31023620020105",
+      "population": 505,
+      "workers": 13
+    },
+    {
+      "tract": "31023620020106",
+      "population": 509,
+      "workers": 10
+    },
+    {
+      "tract": "31023620020107",
+      "population": 468,
+      "workers": 28
+    },
+    {
+      "tract": "31023620020108",
+      "population": 500,
+      "workers": 3
+    },
+    {
+      "tract": "31023620020109",
+      "population": 423,
+      "workers": 7
+    },
+    {
+      "tract": "31023620020110",
+      "population": 574,
+      "workers": 96
+    },
+    {
+      "tract": "31023620020111",
+      "population": 577,
+      "workers": 31
+    },
+    {
+      "tract": "31023620020112",
+      "population": 428,
+      "workers": 11
+    },
+    {
+      "tract": "31023620020113",
+      "population": 539,
+      "workers": 7
+    },
+    {
+      "tract": "31023620030001",
+      "population": 58,
+      "workers": 307
+    },
+    {
+      "tract": "31023620040001",
+      "population": 465,
+      "workers": 8373
+    },
+    {
+      "tract": "31023620040002",
+      "population": 719,
+      "workers": 3048
+    },
+    {
+      "tract": "31023620050001",
+      "population": 430,
+      "workers": 4153
+    },
+    {
+      "tract": "31023620050002",
+      "population": 459,
+      "workers": 393
+    },
+    {
+      "tract": "31023620050003",
+      "population": 444,
+      "workers": 1090
+    },
+    {
+      "tract": "31023620050004",
+      "population": 575,
+      "workers": 4116
+    },
+    {
+      "tract": "31023620050005",
+      "population": 539,
+      "workers": 151
+    },
+    {
+      "tract": "31023620050101",
+      "population": 454,
+      "workers": 13
+    },
+    {
+      "tract": "31023620050102",
+      "population": 451,
+      "workers": 28
+    },
+    {
+      "tract": "31023620050103",
+      "population": 602,
+      "workers": 3
+    },
+    {
+      "tract": "31023620050201",
+      "population": 350,
+      "workers": 17
+    },
+    {
+      "tract": "31023620050202",
+      "population": 438,
+      "workers": 8
+    },
+    {
+      "tract": "31023630010002",
+      "population": 0,
+      "workers": 27
+    },
+    {
+      "tract": "31023630010101",
+      "population": 424,
+      "workers": 47
+    },
+    {
+      "tract": "31023630010102",
+      "population": 647,
+      "workers": 4
+    },
+    {
+      "tract": "31023630010103",
+      "population": 483,
+      "workers": 20
+    },
+    {
+      "tract": "31023630010201",
+      "population": 620,
+      "workers": 115
+    },
+    {
+      "tract": "31023630010202",
+      "population": 444,
+      "workers": 16
+    },
+    {
+      "tract": "31023630010301",
+      "population": 753,
+      "workers": 55
+    },
+    {
+      "tract": "31023630020001",
+      "population": 345,
+      "workers": 116
+    },
+    {
+      "tract": "31023630020002",
+      "population": 973,
+      "workers": 114
+    },
+    {
+      "tract": "31023630020003",
+      "population": 616,
+      "workers": 286
+    },
+    {
+      "tract": "31023630020004",
+      "population": 431,
+      "workers": 183
+    },
+    {
+      "tract": "31023630020005",
+      "population": 370,
+      "workers": 821
+    },
+    {
+      "tract": "31023630020006",
+      "population": 571,
+      "workers": 234
+    },
+    {
+      "tract": "31023630020007",
+      "population": 339,
+      "workers": 476
+    },
+    {
+      "tract": "31023630020008",
+      "population": 437,
+      "workers": 105
+    },
+    {
+      "tract": "31023630020009",
+      "population": 424,
+      "workers": 167
+    },
+    {
+      "tract": "31023630020010",
+      "population": 723,
+      "workers": 30
+    },
+    {
+      "tract": "31023630020011",
+      "population": 751,
+      "workers": 577
+    },
+    {
+      "tract": "31023630020012",
+      "population": 692,
+      "workers": 18
+    },
+    {
+      "tract": "31023630020013",
+      "population": 946,
+      "workers": 591
+    },
+    {
+      "tract": "31023630020014",
+      "population": 399,
+      "workers": 497
+    },
+    {
+      "tract": "31023630020015",
+      "population": 374,
+      "workers": 149
+    },
+    {
+      "tract": "31023630020016",
+      "population": 706,
+      "workers": 26
+    },
+    {
+      "tract": "31023630020101",
+      "population": 505,
+      "workers": 4
+    },
+    {
+      "tract": "31023630020102",
+      "population": 543,
+      "workers": 38
+    },
+    {
+      "tract": "31023630020201",
+      "population": 653,
+      "workers": 20
+    },
+    {
+      "tract": "31023630020202",
+      "population": 433,
+      "workers": 4
+    },
+    {
+      "tract": "31023630020203",
+      "population": 498,
+      "workers": 35
+    },
+    {
+      "tract": "31023630020204",
+      "population": 535,
+      "workers": 16
+    },
+    {
+      "tract": "31023630020205",
+      "population": 432,
+      "workers": 1
+    },
+    {
+      "tract": "31023630020206",
+      "population": 593,
+      "workers": 57
+    },
+    {
+      "tract": "31023630020301",
+      "population": 495,
+      "workers": 33
+    },
+    {
+      "tract": "31023630020302",
+      "population": 722,
+      "workers": 37
+    },
+    {
+      "tract": "31023630030001",
+      "population": 564,
+      "workers": 3038
+    },
+    {
+      "tract": "31023630030002",
+      "population": 455,
+      "workers": 576
+    },
+    {
+      "tract": "31023630030003",
+      "population": 675,
+      "workers": 22
+    },
+    {
+      "tract": "31023630030004",
+      "population": 571,
+      "workers": 118
+    },
+    {
+      "tract": "31023630030005",
+      "population": 562,
+      "workers": 716
+    },
+    {
+      "tract": "31023630030006",
+      "population": 576,
+      "workers": 364
+    },
+    {
+      "tract": "31023630030007",
+      "population": 582,
+      "workers": 4011
+    },
+    {
+      "tract": "31023630030008",
+      "population": 396,
+      "workers": 259
+    },
+    {
+      "tract": "31023630030009",
+      "population": 699,
+      "workers": 27
+    },
+    {
+      "tract": "31023630030201",
+      "population": 488,
+      "workers": 10
+    },
+    {
+      "tract": "31023630030301",
+      "population": 530,
+      "workers": 75
+    },
+    {
+      "tract": "31023630030401",
+      "population": 587,
+      "workers": 103
+    },
+    {
+      "tract": "31023630030402",
+      "population": 486,
+      "workers": 16
+    },
+    {
+      "tract": "31023630030403",
+      "population": 413,
+      "workers": 26
+    },
+    {
+      "tract": "31023630030404",
+      "population": 443,
+      "workers": 38
+    },
+    {
+      "tract": "31023630030405",
+      "population": 584,
+      "workers": 9
+    },
+    {
+      "tract": "31023630030406",
+      "population": 418,
+      "workers": 23
+    },
+    {
+      "tract": "31023630030407",
+      "population": 569,
+      "workers": 35
+    },
+    {
+      "tract": "31023630030501",
+      "population": 761,
+      "workers": 28
+    },
+    {
+      "tract": "31023640010001",
+      "population": 753,
+      "workers": 1121
+    },
+    {
+      "tract": "31023640010002",
+      "population": 0,
+      "workers": 56
+    },
+    {
+      "tract": "31023640010101",
+      "population": 586,
+      "workers": 7
+    },
+    {
+      "tract": "31023640010102",
+      "population": 586,
+      "workers": 67
+    },
+    {
+      "tract": "31023640010201",
+      "population": 659,
+      "workers": 41
+    },
+    {
+      "tract": "31023640010202",
+      "population": 539,
+      "workers": 11
+    },
+    {
+      "tract": "31023640010203",
+      "population": 641,
+      "workers": 13
+    },
+    {
+      "tract": "31023640010301",
+      "population": 426,
+      "workers": 13
+    },
+    {
+      "tract": "31023640020101",
+      "population": 489,
+      "workers": 5
+    },
+    {
+      "tract": "31023640020102",
+      "population": 575,
+      "workers": 280
+    },
+    {
+      "tract": "31023640020103",
+      "population": 503,
+      "workers": 11
+    },
+    {
+      "tract": "31023640020104",
+      "population": 425,
+      "workers": 7
+    },
+    {
+      "tract": "31023640030001",
+      "population": 96,
+      "workers": 1420
+    },
+    {
+      "tract": "31023640030101",
+      "population": 598,
+      "workers": 9
+    },
+    {
+      "tract": "31023640030102",
+      "population": 574,
+      "workers": 13
+    },
+    {
+      "tract": "31023640030103",
+      "population": 426,
+      "workers": 26
+    },
+    {
+      "tract": "31023640030104",
+      "population": 449,
+      "workers": 20
+    },
+    {
+      "tract": "31023640030105",
+      "population": 635,
+      "workers": 11
+    },
+    {
+      "tract": "31023640030201",
+      "population": 478,
+      "workers": 10
+    },
+    {
+      "tract": "31023640030202",
+      "population": 490,
+      "workers": 15
+    },
+    {
+      "tract": "31023640030203",
+      "population": 541,
+      "workers": 6
+    },
+    {
+      "tract": "31023640030204",
+      "population": 530,
+      "workers": 25
+    },
+    {
+      "tract": "31023640040001",
+      "population": 69,
+      "workers": 334
+    },
+    {
+      "tract": "31023640040101",
+      "population": 599,
+      "workers": 10
+    },
+    {
+      "tract": "31023640040102",
+      "population": 594,
+      "workers": 17
+    },
+    {
+      "tract": "31023640040103",
+      "population": 574,
+      "workers": 13
+    },
+    {
+      "tract": "31023640050001",
+      "population": 204,
+      "workers": 89
+    },
+    {
+      "tract": "31023640050101",
+      "population": 620,
+      "workers": 20
+    },
+    {
+      "tract": "31023640050102",
+      "population": 632,
+      "workers": 14
+    },
+    {
+      "tract": "31023640050103",
+      "population": 462,
+      "workers": 76
+    },
+    {
+      "tract": "31023640050104",
+      "population": 425,
+      "workers": 6
+    },
+    {
+      "tract": "31023640050105",
+      "population": 604,
+      "workers": 13
+    },
+    {
+      "tract": "31023670010001",
+      "population": 387,
+      "workers": 420
+    },
+    {
+      "tract": "31023670010002",
+      "population": 386,
+      "workers": 2103
+    },
+    {
+      "tract": "31023670020001",
+      "population": 816,
+      "workers": 3966
+    },
+    {
+      "tract": "31023670020201",
+      "population": 409,
+      "workers": 117
+    },
+    {
+      "tract": "31023670030001",
+      "population": 801,
+      "workers": 6009
+    },
+    {
+      "tract": "31023670040001",
+      "population": 500,
+      "workers": 120
+    },
+    {
+      "tract": "31023670040002",
+      "population": 432,
+      "workers": 438
+    },
+    {
+      "tract": "31023670040003",
+      "population": 763,
+      "workers": 92
+    },
+    {
+      "tract": "31023670040101",
+      "population": 536,
+      "workers": 42
+    },
+    {
+      "tract": "31023670040102",
+      "population": 563,
+      "workers": 9
+    },
+    {
+      "tract": "31023670040103",
+      "population": 563,
+      "workers": 22
+    },
+    {
+      "tract": "31023670040104",
+      "population": 643,
+      "workers": 7
+    },
+    {
+      "tract": "31023670040105",
+      "population": 538,
+      "workers": 12
+    },
+    {
+      "tract": "31023670050001",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023670050101",
+      "population": 623,
+      "workers": 12
+    },
+    {
+      "tract": "31023670050102",
+      "population": 549,
+      "workers": 16
+    },
+    {
+      "tract": "31023670050103",
+      "population": 427,
+      "workers": 54
+    },
+    {
+      "tract": "31023670050104",
+      "population": 582,
+      "workers": 39
+    },
+    {
+      "tract": "31023670050105",
+      "population": 528,
+      "workers": 35
+    },
+    {
+      "tract": "31023670060002",
+      "population": 12,
+      "workers": 679
+    },
+    {
+      "tract": "31023670060101",
+      "population": 566,
+      "workers": 7
+    },
+    {
+      "tract": "31023670060102",
+      "population": 607,
+      "workers": 19
+    },
+    {
+      "tract": "31023670060103",
+      "population": 482,
+      "workers": 17
+    },
+    {
+      "tract": "31023670060104",
+      "population": 590,
+      "workers": 8
+    },
+    {
+      "tract": "31023670060105",
+      "population": 447,
+      "workers": 31
+    },
+    {
+      "tract": "31023670060106",
+      "population": 572,
+      "workers": 56
+    },
+    {
+      "tract": "31023670060107",
+      "population": 531,
+      "workers": 23
+    },
+    {
+      "tract": "31023670060108",
+      "population": 562,
+      "workers": 66
+    },
+    {
+      "tract": "31023670060109",
+      "population": 427,
+      "workers": 4
+    },
+    {
+      "tract": "31023670070001",
+      "population": 1134,
+      "workers": 45
+    },
+    {
+      "tract": "31023670070101",
+      "population": 601,
+      "workers": 10
+    },
+    {
+      "tract": "31023670070102",
+      "population": 609,
+      "workers": 70
+    },
+    {
+      "tract": "31023670080001",
+      "population": 404,
+      "workers": 37
+    },
+    {
+      "tract": "31023670080002",
+      "population": 308,
+      "workers": 760
+    },
+    {
+      "tract": "31023670080003",
+      "population": 428,
+      "workers": 33
+    },
+    {
+      "tract": "31023670080004",
+      "population": 379,
+      "workers": 5698
+    },
+    {
+      "tract": "31023670080101",
+      "population": 572,
+      "workers": 23
+    },
+    {
+      "tract": "31023670080102",
+      "population": 410,
+      "workers": 14
+    },
+    {
+      "tract": "31023670080103",
+      "population": 1352,
+      "workers": 28
+    },
+    {
+      "tract": "31023670080104",
+      "population": 690,
+      "workers": 25
+    },
+    {
+      "tract": "31023670080105",
+      "population": 574,
+      "workers": 32
+    },
+    {
+      "tract": "31023670080106",
+      "population": 611,
+      "workers": 31
+    },
+    {
+      "tract": "31023670080107",
+      "population": 547,
+      "workers": 44
+    },
+    {
+      "tract": "31023670080108",
+      "population": 441,
+      "workers": 23
+    },
+    {
+      "tract": "31023670080109",
+      "population": 533,
+      "workers": 120
+    },
+    {
+      "tract": "31023670080110",
+      "population": 1061,
+      "workers": 49
+    },
+    {
+      "tract": "31023670080111",
+      "population": 487,
+      "workers": 14
+    },
+    {
+      "tract": "31023670080112",
+      "population": 425,
+      "workers": 12
+    },
+    {
+      "tract": "31023670080113",
+      "population": 501,
+      "workers": 8
+    },
+    {
+      "tract": "31023670080201",
+      "population": 579,
+      "workers": 83
+    },
+    {
+      "tract": "31023670080202",
+      "population": 560,
+      "workers": 5
+    },
+    {
+      "tract": "31023670080203",
+      "population": 402,
+      "workers": 7
+    },
+    {
+      "tract": "31023670080301",
+      "population": 653,
+      "workers": 25
+    },
+    {
+      "tract": "31023670080401",
+      "population": 484,
+      "workers": 39
+    },
+    {
+      "tract": "31023670080501",
+      "population": 299,
+      "workers": 357
+    },
+    {
+      "tract": "31023680010001",
+      "population": 583,
+      "workers": 63
+    },
+    {
+      "tract": "31023680010002",
+      "population": 580,
+      "workers": 941
+    },
+    {
+      "tract": "31023680010003",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010004",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010005",
+      "population": 0,
+      "workers": 3
+    },
+    {
+      "tract": "31023680010006",
+      "population": 159,
+      "workers": 52
+    },
+    {
+      "tract": "31023680010101",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010201",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010202",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010301",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010302",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010303",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010304",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010401",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010402",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010403",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010501",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010502",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010503",
+      "population": 0,
+      "workers": 2
+    },
+    {
+      "tract": "31023680010601",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010602",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010603",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010701",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010702",
+      "population": 0,
+      "workers": 7
+    },
+    {
+      "tract": "31023680010703",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010801",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010802",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010803",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010901",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010902",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680010903",
+      "population": 0,
+      "workers": 1
+    },
+    {
+      "tract": "31023680011001",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680011101",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680011102",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680011103",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680011201",
+      "population": 489,
+      "workers": 10
+    },
+    {
+      "tract": "31023680011202",
+      "population": 425,
+      "workers": 5
+    },
+    {
+      "tract": "31023680011203",
+      "population": 658,
+      "workers": 10
+    },
+    {
+      "tract": "31023680011204",
+      "population": 432,
+      "workers": 15
+    },
+    {
+      "tract": "31023680011205",
+      "population": 374,
+      "workers": 25
+    },
+    {
+      "tract": "31023680011206",
+      "population": 533,
+      "workers": 32
+    },
+    {
+      "tract": "31023680011207",
+      "population": 442,
+      "workers": 30
+    },
+    {
+      "tract": "31023680011208",
+      "population": 351,
+      "workers": 6
+    },
+    {
+      "tract": "31023680011209",
+      "population": 412,
+      "workers": 6
+    },
+    {
+      "tract": "31023680011210",
+      "population": 425,
+      "workers": 17
+    },
+    {
+      "tract": "31023680011211",
+      "population": 514,
+      "workers": 21
+    },
+    {
+      "tract": "31023680011212",
+      "population": 398,
+      "workers": 3
+    },
+    {
+      "tract": "31023680020001",
+      "population": 329,
+      "workers": 15
+    },
+    {
+      "tract": "31023680030001",
+      "population": 0,
+      "workers": 94
+    },
+    {
+      "tract": "31023680030101",
+      "population": 744,
+      "workers": 12
+    },
+    {
+      "tract": "31023680040001",
+      "population": 500,
+      "workers": 1765
+    },
+    {
+      "tract": "31023680040002",
+      "population": 517,
+      "workers": 593
+    },
+    {
+      "tract": "31023680050001",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680050101",
+      "population": 671,
+      "workers": 13
+    },
+    {
+      "tract": "31023680060001",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023680060101",
+      "population": 475,
+      "workers": 31
+    },
+    {
+      "tract": "31023680060102",
+      "population": 432,
+      "workers": 20
+    },
+    {
+      "tract": "31023680060103",
+      "population": 352,
+      "workers": 7
+    },
+    {
+      "tract": "31023680060201",
+      "population": 446,
+      "workers": 26
+    },
+    {
+      "tract": "31023680060202",
+      "population": 409,
+      "workers": 17
+    },
+    {
+      "tract": "31023680060203",
+      "population": 468,
+      "workers": 11
+    },
+    {
+      "tract": "31023680070001",
+      "population": 440,
+      "workers": 103
+    },
+    {
+      "tract": "31023680080001",
+      "population": 304,
+      "workers": 149
+    },
+    {
+      "tract": "31023680080002",
+      "population": 549,
+      "workers": 585
+    },
+    {
+      "tract": "31023680080003",
+      "population": 384,
+      "workers": 84
+    },
+    {
+      "tract": "31023680080004",
+      "population": 377,
+      "workers": 339
+    },
+    {
+      "tract": "31023680080005",
+      "population": 1303,
+      "workers": 82
+    },
+    {
+      "tract": "31023680090001",
+      "population": 214,
+      "workers": 23
+    },
+    {
+      "tract": "31023680090002",
+      "population": 489,
+      "workers": 324
+    },
+    {
+      "tract": "31023680090003",
+      "population": 538,
+      "workers": 1370
+    },
+    {
+      "tract": "31023680090004",
+      "population": 0,
+      "workers": 70
+    },
+    {
+      "tract": "31023680090101",
+      "population": 481,
+      "workers": 7
+    },
+    {
+      "tract": "31023680090102",
+      "population": 424,
+      "workers": 23
+    },
+    {
+      "tract": "31023680090103",
+      "population": 528,
+      "workers": 14
+    },
+    {
+      "tract": "31023680090104",
+      "population": 491,
+      "workers": 21
+    },
+    {
+      "tract": "31023680090105",
+      "population": 523,
+      "workers": 7
+    },
+    {
+      "tract": "31023680090106",
+      "population": 531,
+      "workers": 11
+    },
+    {
+      "tract": "31023680090107",
+      "population": 607,
+      "workers": 41
+    },
+    {
+      "tract": "31023680090108",
+      "population": 419,
+      "workers": 12
+    },
+    {
+      "tract": "31023710010001",
+      "population": 0,
+      "workers": 644
+    },
+    {
+      "tract": "31023710010101",
+      "population": 512,
+      "workers": 45
+    },
+    {
+      "tract": "31023710010102",
+      "population": 634,
+      "workers": 66
+    },
+    {
+      "tract": "31023710010103",
+      "population": 513,
+      "workers": 150
+    },
+    {
+      "tract": "31023710010104",
+      "population": 510,
+      "workers": 27
+    },
+    {
+      "tract": "31023710010201",
+      "population": 551,
+      "workers": 15
+    },
+    {
+      "tract": "31023710010202",
+      "population": 588,
+      "workers": 29
+    },
+    {
+      "tract": "31023710010203",
+      "population": 496,
+      "workers": 15
+    },
+    {
+      "tract": "31023710010204",
+      "population": 578,
+      "workers": 16
+    },
+    {
+      "tract": "31023710010301",
+      "population": 618,
+      "workers": 21
+    },
+    {
+      "tract": "31023710010302",
+      "population": 506,
+      "workers": 10
+    },
+    {
+      "tract": "31023710010303",
+      "population": 538,
+      "workers": 83
+    },
+    {
+      "tract": "31023710020001",
+      "population": 0,
+      "workers": 36
+    },
+    {
+      "tract": "31023710020002",
+      "population": 0,
+      "workers": 143
+    },
+    {
+      "tract": "31023710020101",
+      "population": 522,
+      "workers": 55
+    },
+    {
+      "tract": "31023710020102",
+      "population": 605,
+      "workers": 28
+    },
+    {
+      "tract": "31023710020103",
+      "population": 604,
+      "workers": 56
+    },
+    {
+      "tract": "31023710020104",
+      "population": 620,
+      "workers": 70
+    },
+    {
+      "tract": "31023710020201",
+      "population": 649,
+      "workers": 6
+    },
+    {
+      "tract": "31023710020202",
+      "population": 670,
+      "workers": 92
+    },
+    {
+      "tract": "31023710020203",
+      "population": 705,
+      "workers": 0
+    },
+    {
+      "tract": "31023710020301",
+      "population": 488,
+      "workers": 10
+    },
+    {
+      "tract": "31023710020302",
+      "population": 657,
+      "workers": 22
+    },
+    {
+      "tract": "31023710030001",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023710030002",
+      "population": 256,
+      "workers": 441
+    },
+    {
+      "tract": "31023710030003",
+      "population": 2539,
+      "workers": 1169
+    },
+    {
+      "tract": "31023710030004",
+      "population": 800,
+      "workers": 472
+    },
+    {
+      "tract": "31023710030005",
+      "population": 599,
+      "workers": 1708
+    },
+    {
+      "tract": "31023710030101",
+      "population": 699,
+      "workers": 194
+    },
+    {
+      "tract": "31023710030301",
+      "population": 551,
+      "workers": 100
+    },
+    {
+      "tract": "31023710030401",
+      "population": 616,
+      "workers": 30
+    },
+    {
+      "tract": "31023710030402",
+      "population": 546,
+      "workers": 26
+    },
+    {
+      "tract": "31023710030403",
+      "population": 502,
+      "workers": 23
+    },
+    {
+      "tract": "31023710030404",
+      "population": 670,
+      "workers": 31
+    },
+    {
+      "tract": "31023710040001",
+      "population": 767,
+      "workers": 2305
+    },
+    {
+      "tract": "31023710040101",
+      "population": 453,
+      "workers": 5
+    },
+    {
+      "tract": "31023710040102",
+      "population": 458,
+      "workers": 6
+    },
+    {
+      "tract": "31023710040103",
+      "population": 458,
+      "workers": 32
+    },
+    {
+      "tract": "31023710040104",
+      "population": 447,
+      "workers": 38
+    },
+    {
+      "tract": "31023710040105",
+      "population": 442,
+      "workers": 13
+    },
+    {
+      "tract": "31023710040106",
+      "population": 417,
+      "workers": 6
+    },
+    {
+      "tract": "31023710040107",
+      "population": 437,
+      "workers": 17
+    },
+    {
+      "tract": "31023710040108",
+      "population": 547,
+      "workers": 244
+    },
+    {
+      "tract": "31023710050001",
+      "population": 687,
+      "workers": 1235
+    },
+    {
+      "tract": "31023710050002",
+      "population": 770,
+      "workers": 119
+    },
+    {
+      "tract": "31023710050003",
+      "population": 627,
+      "workers": 110
+    },
+    {
+      "tract": "31023710050004",
+      "population": 535,
+      "workers": 1597
+    },
+    {
+      "tract": "31023710050005",
+      "population": 1340,
+      "workers": 959
+    },
+    {
+      "tract": "31023720010001",
+      "population": 688,
+      "workers": 220
+    },
+    {
+      "tract": "31023720010101",
+      "population": 489,
+      "workers": 8
+    },
+    {
+      "tract": "31023720010102",
+      "population": 494,
+      "workers": 23
+    },
+    {
+      "tract": "31023720010103",
+      "population": 460,
+      "workers": 2
+    },
+    {
+      "tract": "31023720010104",
+      "population": 664,
+      "workers": 19
+    },
+    {
+      "tract": "31023720010105",
+      "population": 635,
+      "workers": 11
+    },
+    {
+      "tract": "31023720010106",
+      "population": 433,
+      "workers": 83
+    },
+    {
+      "tract": "31023720010107",
+      "population": 565,
+      "workers": 17
+    },
+    {
+      "tract": "31023720010108",
+      "population": 503,
+      "workers": 39
+    },
+    {
+      "tract": "31023720010109",
+      "population": 586,
+      "workers": 18
+    },
+    {
+      "tract": "31023720020001",
+      "population": 531,
+      "workers": 252
+    },
+    {
+      "tract": "31023720020002",
+      "population": 308,
+      "workers": 93
+    },
+    {
+      "tract": "31023720020003",
+      "population": 372,
+      "workers": 2231
+    },
+    {
+      "tract": "31023720020004",
+      "population": 508,
+      "workers": 111
+    },
+    {
+      "tract": "31023720020005",
+      "population": 0,
+      "workers": 24
+    },
+    {
+      "tract": "31023720020101",
+      "population": 562,
+      "workers": 26
+    },
+    {
+      "tract": "31023720020102",
+      "population": 567,
+      "workers": 97
+    },
+    {
+      "tract": "31023720020103",
+      "population": 559,
+      "workers": 15
+    },
+    {
+      "tract": "31023720020104",
+      "population": 638,
+      "workers": 18
+    },
+    {
+      "tract": "31023720020105",
+      "population": 447,
+      "workers": 9
+    },
+    {
+      "tract": "31023720020106",
+      "population": 582,
+      "workers": 17
+    },
+    {
+      "tract": "31023720020107",
+      "population": 582,
+      "workers": 8
+    },
+    {
+      "tract": "31023720020108",
+      "population": 417,
+      "workers": 9
+    },
+    {
+      "tract": "31023720020109",
+      "population": 552,
+      "workers": 13
+    },
+    {
+      "tract": "31023720020110",
+      "population": 638,
+      "workers": 78
+    },
+    {
+      "tract": "31023720020111",
+      "population": 465,
+      "workers": 5
+    },
+    {
+      "tract": "31023720030001",
+      "population": 823,
+      "workers": 2449
+    },
+    {
+      "tract": "31023720030002",
+      "population": 538,
+      "workers": 59
+    },
+    {
+      "tract": "31023720030003",
+      "population": 755,
+      "workers": 2007
+    },
+    {
+      "tract": "31023720030004",
+      "population": 671,
+      "workers": 13
+    },
+    {
+      "tract": "31023720040001",
+      "population": 829,
+      "workers": 746
+    },
+    {
+      "tract": "31023740010001",
+      "population": 93,
+      "workers": 694
+    },
+    {
+      "tract": "31023740010002",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023740010101",
+      "population": 461,
+      "workers": 10
+    },
+    {
+      "tract": "31023740010102",
+      "population": 629,
+      "workers": 38
+    },
+    {
+      "tract": "31023740010103",
+      "population": 504,
+      "workers": 3
+    },
+    {
+      "tract": "31023740010104",
+      "population": 562,
+      "workers": 9
+    },
+    {
+      "tract": "31023740010105",
+      "population": 499,
+      "workers": 21
+    },
+    {
+      "tract": "31023740010106",
+      "population": 442,
+      "workers": 4
+    },
+    {
+      "tract": "31023740010107",
+      "population": 488,
+      "workers": 36
+    },
+    {
+      "tract": "31023740010201",
+      "population": 586,
+      "workers": 79
+    },
+    {
+      "tract": "31023740010202",
+      "population": 483,
+      "workers": 15
+    },
+    {
+      "tract": "31023740010203",
+      "population": 654,
+      "workers": 16
+    },
+    {
+      "tract": "31023740010204",
+      "population": 577,
+      "workers": 5
+    },
+    {
+      "tract": "31023740020001",
+      "population": 0,
+      "workers": 255
+    },
+    {
+      "tract": "31023740020002",
+      "population": 0,
+      "workers": 183
+    },
+    {
+      "tract": "31023740020101",
+      "population": 438,
+      "workers": 4
+    },
+    {
+      "tract": "31023740020102",
+      "population": 387,
+      "workers": 2
+    },
+    {
+      "tract": "31023740020103",
+      "population": 411,
+      "workers": 10
+    },
+    {
+      "tract": "31023740020104",
+      "population": 603,
+      "workers": 8
+    },
+    {
+      "tract": "31023740020105",
+      "population": 535,
+      "workers": 49
+    },
+    {
+      "tract": "31023740020201",
+      "population": 635,
+      "workers": 16
+    },
+    {
+      "tract": "31023740020202",
+      "population": 502,
+      "workers": 48
+    },
+    {
+      "tract": "31023740020203",
+      "population": 580,
+      "workers": 33
+    },
+    {
+      "tract": "31023740020204",
+      "population": 423,
+      "workers": 8
+    },
+    {
+      "tract": "31023740020301",
+      "population": 572,
+      "workers": 6
+    },
+    {
+      "tract": "31023740020302",
+      "population": 570,
+      "workers": 36
+    },
+    {
+      "tract": "31023740020303",
+      "population": 553,
+      "workers": 7
+    },
+    {
+      "tract": "31023740020304",
+      "population": 504,
+      "workers": 121
+    },
+    {
+      "tract": "31023740020305",
+      "population": 578,
+      "workers": 35
+    },
+    {
+      "tract": "31023740020306",
+      "population": 570,
+      "workers": 11
+    },
+    {
+      "tract": "31023740020401",
+      "population": 515,
+      "workers": 31
+    },
+    {
+      "tract": "31023740020402",
+      "population": 639,
+      "workers": 12
+    },
+    {
+      "tract": "31023740020403",
+      "population": 690,
+      "workers": 40
+    },
+    {
+      "tract": "31023740030002",
+      "population": 0,
+      "workers": 90
+    },
+    {
+      "tract": "31023740030101",
+      "population": 509,
+      "workers": 5
+    },
+    {
+      "tract": "31023740030102",
+      "population": 460,
+      "workers": 28
+    },
+    {
+      "tract": "31023740030103",
+      "population": 435,
+      "workers": 8
+    },
+    {
+      "tract": "31023740030201",
+      "population": 423,
+      "workers": 26
+    },
+    {
+      "tract": "31023740030202",
+      "population": 551,
+      "workers": 4
+    },
+    {
+      "tract": "31023740030203",
+      "population": 407,
+      "workers": 8
+    },
+    {
+      "tract": "31023740030204",
+      "population": 546,
+      "workers": 5
+    },
+    {
+      "tract": "31023740030301",
+      "population": 562,
+      "workers": 6
+    },
+    {
+      "tract": "31023740030302",
+      "population": 558,
+      "workers": 12
+    },
+    {
+      "tract": "31023740030303",
+      "population": 651,
+      "workers": 25
+    },
+    {
+      "tract": "31023740030304",
+      "population": 595,
+      "workers": 7
+    },
+    {
+      "tract": "31023740030305",
+      "population": 537,
+      "workers": 49
+    },
+    {
+      "tract": "31023740030401",
+      "population": 554,
+      "workers": 525
+    },
+    {
+      "tract": "31023740030501",
+      "population": 464,
+      "workers": 481
+    },
+    {
+      "tract": "31023740040001",
+      "population": 722,
+      "workers": 7456
+    },
+    {
+      "tract": "31023740050001",
+      "population": 101,
+      "workers": 44894
+    },
+    {
+      "tract": "31023740060001",
+      "population": 380,
+      "workers": 9424
+    },
+    {
+      "tract": "31023740070001",
+      "population": 150,
+      "workers": 13575
+    },
+    {
+      "tract": "31023740080001",
+      "population": 1,
+      "workers": 19090
+    },
+    {
+      "tract": "31023750010001",
+      "population": 614,
+      "workers": 366
+    },
+    {
+      "tract": "31023750010002",
+      "population": 477,
+      "workers": 491
+    },
+    {
+      "tract": "31023750010003",
+      "population": 405,
+      "workers": 464
+    },
+    {
+      "tract": "31023750010004",
+      "population": 445,
+      "workers": 14
+    },
+    {
+      "tract": "31023750010005",
+      "population": 454,
+      "workers": 219
+    },
+    {
+      "tract": "31023750010006",
+      "population": 504,
+      "workers": 308
+    },
+    {
+      "tract": "31023750010007",
+      "population": 621,
+      "workers": 1532
+    },
+    {
+      "tract": "31023750010101",
+      "population": 431,
+      "workers": 6
+    },
+    {
+      "tract": "31023750010102",
+      "population": 396,
+      "workers": 20
+    },
+    {
+      "tract": "31023750010201",
+      "population": 466,
+      "workers": 38
+    },
+    {
+      "tract": "31023750010202",
+      "population": 399,
+      "workers": 5
+    },
+    {
+      "tract": "31023750010203",
+      "population": 579,
+      "workers": 7
+    },
+    {
+      "tract": "31023750010204",
+      "population": 526,
+      "workers": 5
+    },
+    {
+      "tract": "31023750010301",
+      "population": 545,
+      "workers": 18
+    },
+    {
+      "tract": "31023750010302",
+      "population": 442,
+      "workers": 49
+    },
+    {
+      "tract": "31023750010303",
+      "population": 436,
+      "workers": 28
+    },
+    {
+      "tract": "31023750010304",
+      "population": 445,
+      "workers": 4
+    },
+    {
+      "tract": "31023750010305",
+      "population": 531,
+      "workers": 7
+    },
+    {
+      "tract": "31023750010306",
+      "population": 419,
+      "workers": 6
+    },
+    {
+      "tract": "31023750010307",
+      "population": 466,
+      "workers": 4
+    },
+    {
+      "tract": "31023750010401",
+      "population": 687,
+      "workers": 53
+    },
+    {
+      "tract": "31023750010501",
+      "population": 638,
+      "workers": 16
+    },
+    {
+      "tract": "31023750010502",
+      "population": 620,
+      "workers": 26
+    },
+    {
+      "tract": "31023750020001",
+      "population": 643,
+      "workers": 259
+    },
+    {
+      "tract": "31023750020101",
+      "population": 559,
+      "workers": 30
+    },
+    {
+      "tract": "31023750020102",
+      "population": 630,
+      "workers": 9
+    },
+    {
+      "tract": "31023750020201",
+      "population": 524,
+      "workers": 39
+    },
+    {
+      "tract": "31023750030001",
+      "population": 330,
+      "workers": 652
+    },
+    {
+      "tract": "31023750030002",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023750030101",
+      "population": 585,
+      "workers": 21
+    },
+    {
+      "tract": "31023750030102",
+      "population": 674,
+      "workers": 6
+    },
+    {
+      "tract": "31023750030103",
+      "population": 684,
+      "workers": 37
+    },
+    {
+      "tract": "31023750030201",
+      "population": 448,
+      "workers": 8
+    },
+    {
+      "tract": "31023750030202",
+      "population": 447,
+      "workers": 7
+    },
+    {
+      "tract": "31023750030203",
+      "population": 386,
+      "workers": 51
+    },
+    {
+      "tract": "31023750030301",
+      "population": 564,
+      "workers": 43
+    },
+    {
+      "tract": "31023750030302",
+      "population": 607,
+      "workers": 14
+    },
+    {
+      "tract": "31023750030303",
+      "population": 496,
+      "workers": 31
+    },
+    {
+      "tract": "31023750030401",
+      "population": 510,
+      "workers": 1
+    },
+    {
+      "tract": "31023750030402",
+      "population": 475,
+      "workers": 1
+    },
+    {
+      "tract": "31023750030403",
+      "population": 615,
+      "workers": 30
+    },
+    {
+      "tract": "31023750030501",
+      "population": 697,
+      "workers": 35
+    },
+    {
+      "tract": "31023750030502",
+      "population": 889,
+      "workers": 35
+    },
+    {
+      "tract": "31023750030601",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023750030602",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023750030603",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023750030604",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023750030605",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023750030606",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023750030607",
+      "population": 0,
+      "workers": 0
+    },
+    {
+      "tract": "31023750040001",
+      "population": 951,
+      "workers": 1352
+    },
+    {
+      "tract": "31023760010001",
+      "population": 0,
+      "workers": 149
+    },
+    {
+      "tract": "31023760010101",
+      "population": 622,
+      "workers": 20
+    },
+    {
+      "tract": "31023760010102",
+      "population": 432,
+      "workers": 34
+    },
+    {
+      "tract": "31023760010103",
+      "population": 615,
+      "workers": 8
+    },
+    {
+      "tract": "31023760010104",
+      "population": 431,
+      "workers": 15
+    },
+    {
+      "tract": "31023760010105",
+      "population": 438,
+      "workers": 14
+    },
+    {
+      "tract": "31023760010201",
+      "population": 466,
+      "workers": 32
+    },
+    {
+      "tract": "31023760010202",
+      "population": 447,
+      "workers": 4
+    },
+    {
+      "tract": "31023760010203",
+      "population": 620,
+      "workers": 4
+    },
+    {
+      "tract": "31023760010204",
+      "population": 542,
+      "workers": 17
+    },
+    {
+      "tract": "31023760010205",
+      "population": 467,
+      "workers": 2
+    },
+    {
+      "tract": "31023760010206",
+      "population": 493,
+      "workers": 2
+    },
+    {
+      "tract": "31023760020001",
+      "population": 1,
+      "workers": 10531
+    },
+    {
+      "tract": "31023760020101",
+      "population": 653,
+      "workers": 926
+    },
+    {
+      "tract": "31023760020102",
+      "population": 569,
+      "workers": 10
+    },
+    {
+      "tract": "31023760020201",
+      "population": 640,
+      "workers": 19
+    },
+    {
+      "tract": "31023760020202",
+      "population": 548,
+      "workers": 902
+    },
+    {
+      "tract": "31023760020203",
+      "population": 329,
+      "workers": 11
+    },
+    {
+      "tract": "31023760030001",
+      "population": 1053,
+      "workers": 512
+    },
+    {
+      "tract": "31023760030002",
+      "population": 382,
+      "workers": 316
+    },
+    {
+      "tract": "31023760030003",
+      "population": 523,
+      "workers": 556
+    },
+    {
+      "tract": "31023760030004",
+      "population": 0,
+      "workers": 24
+    },
+    {
+      "tract": "31023760030101",
+      "population": 536,
+      "workers": 14
+    },
+    {
+      "tract": "31023760030102",
+      "population": 505,
+      "workers": 21
+    },
+    {
+      "tract": "31023760030201",
+      "population": 561,
+      "workers": 17
+    },
+    {
+      "tract": "31023760030202",
+      "population": 508,
+      "workers": 19
+    },
+    {
+      "tract": "31023760030301",
+      "population": 522,
+      "workers": 20
+    },
+    {
+      "tract": "31023760030302",
+      "population": 516,
+      "workers": 6
+    },
+    {
+      "tract": "31023760030303",
+      "population": 423,
+      "workers": 8
+    },
+    {
+      "tract": "31023760030401",
+      "population": 545,
+      "workers": 0
+    },
+    {
+      "tract": "31023760030402",
+      "population": 644,
+      "workers": 35
+    },
+    {
+      "tract": "31023760030501",
+      "population": 521,
+      "workers": 3
+    },
+    {
+      "tract": "31023760030502",
+      "population": 493,
+      "workers": 18
+    },
+    {
+      "tract": "31023760030503",
+      "population": 423,
+      "workers": 36
+    },
+    {
+      "tract": "31023760030504",
+      "population": 418,
+      "workers": 37
+    },
+    {
+      "tract": "31023760040001",
+      "population": 391,
+      "workers": 332
+    },
+    {
+      "tract": "31023760040002",
+      "population": 390,
+      "workers": 939
+    },
+    {
+      "tract": "31023760040101",
+      "population": 566,
+      "workers": 21
+    },
+    {
+      "tract": "31023760040102",
+      "population": 682,
+      "workers": 10
+    },
+    {
+      "tract": "31023760040103",
+      "population": 492,
+      "workers": 12
+    },
+    {
+      "tract": "31023760040104",
+      "population": 660,
+      "workers": 18
+    },
+    {
+      "tract": "31023760040105",
+      "population": 700,
+      "workers": 12
+    },
+    {
+      "tract": "31023760040106",
+      "population": 709,
+      "workers": 49
+    },
+    {
+      "tract": "31023760040107",
+      "population": 664,
+      "workers": 8
+    },
+    {
+      "tract": "31023760040108",
+      "population": 506,
+      "workers": 19
+    },
+    {
+      "tract": "31023760040201",
+      "population": 609,
+      "workers": 5
+    },
+    {
+      "tract": "31023760040202",
+      "population": 565,
+      "workers": 9
+    },
+    {
+      "tract": "31023760040203",
+      "population": 521,
+      "workers": 35
+    },
+    {
+      "tract": "31023760040204",
+      "population": 682,
+      "workers": 37
+    },
+    {
+      "tract": "31023760040205",
+      "population": 529,
+      "workers": 5
+    },
+    {
+      "tract": "31023760040206",
+      "population": 681,
+      "workers": 13
+    },
+    {
+      "tract": "31023760040207",
+      "population": 698,
+      "workers": 11
+    },
+    {
+      "tract": "31023770010001",
+      "population": 0,
+      "workers": 4616
+    },
+    {
+      "tract": "31023770010101",
+      "population": 522,
+      "workers": 12
+    },
+    {
+      "tract": "31023770010102",
+      "population": 625,
+      "workers": 240
+    },
+    {
+      "tract": "31023770010103",
+      "population": 495,
+      "workers": 11
+    },
+    {
+      "tract": "31023770010201",
+      "population": 506,
+      "workers": 8
+    },
+    {
+      "tract": "31023770010202",
+      "population": 452,
+      "workers": 21
+    },
+    {
+      "tract": "31023770010203",
+      "population": 636,
+      "workers": 358
+    },
+    {
+      "tract": "31023770010204",
+      "population": 669,
+      "workers": 52
+    },
+    {
+      "tract": "31023770020101",
+      "population": 496,
+      "workers": 5
+    },
+    {
+      "tract": "31023770020102",
+      "population": 678,
+      "workers": 578
+    },
+    {
+      "tract": "31023770020103",
+      "population": 521,
+      "workers": 1392
+    },
+    {
+      "tract": "31023770020104",
+      "population": 581,
+      "workers": 93
+    },
+    {
+      "tract": "31023770020105",
+      "population": 376,
+      "workers": 3
+    },
+    {
+      "tract": "31023770020106",
+      "population": 355,
+      "workers": 44
+    },
+    {
+      "tract": "31023770020107",
+      "population": 576,
+      "workers": 17
+    },
+    {
+      "tract": "31023770020108",
+      "population": 564,
+      "workers": 12
+    },
+    {
+      "tract": "31023770020109",
+      "population": 375,
+      "workers": 10
+    },
+    {
+      "tract": "31023770020110",
+      "population": 512,
+      "workers": 3
+    },
+    {
+      "tract": "31023770020111",
+      "population": 365,
+      "workers": 7
+    },
+    {
+      "tract": "31023770030001",
+      "population": 258,
+      "workers": 722
+    },
+    {
+      "tract": "31023770030003",
+      "population": 4,
+      "workers": 225
+    },
+    {
+      "tract": "31023770030004",
+      "population": 2485,
+      "workers": 2300
+    },
+    {
+      "tract": "31023770030101",
+      "population": 547,
+      "workers": 188
+    },
+    {
+      "tract": "31023770030102",
+      "population": 473,
+      "workers": 102
+    },
+    {
+      "tract": "31023770030201",
+      "population": 337,
+      "workers": 439
+    },
+    {
+      "tract": "31023770030202",
+      "population": 796,
+      "workers": 8
+    },
+    {
+      "tract": "31023770030203",
+      "population": 460,
+      "workers": 33
+    },
+    {
+      "tract": "31023770030301",
+      "population": 460,
+      "workers": 100
+    },
+    {
+      "tract": "31023770030302",
+      "population": 422,
+      "workers": 222
+    },
+    {
+      "tract": "31023770030501",
+      "population": 691,
+      "workers": 150
+    },
+    {
+      "tract": "31023770030601",
+      "population": 462,
+      "workers": 38
+    },
+    {
+      "tract": "31023770040001",
+      "population": 1135,
+      "workers": 13407
+    },
+    {
+      "tract": "31023770040002",
+      "population": 792,
+      "workers": 326
+    },
+    {
+      "tract": "31023770040003",
+      "population": 1124,
+      "workers": 1140
+    },
+    {
+      "tract": "31023770040101",
+      "population": 485,
+      "workers": 121
+    },
+    {
+      "tract": "31023770050001",
+      "population": 0,
+      "workers": 8
+    },
+    {
+      "tract": "31023770050002",
+      "population": 1874,
+      "workers": 974
+    },
+    {
+      "tract": "31023770050003",
+      "population": 1059,
+      "workers": 644
+    },
+    {
+      "tract": "31023770050004",
+      "population": 0,
+      "workers": 73
+    },
+    {
+      "tract": "31023770050005",
+      "population": 1095,
+      "workers": 458
+    },
+    {
+      "tract": "31023770050101",
+      "population": 564,
+      "workers": 141
+    },
+    {
+      "tract": "31023770050201",
+      "population": 805,
+      "workers": 140
+    },
+    {
+      "tract": "31023770050301",
+      "population": 622,
+      "workers": 532
+    },
+    {
+      "tract": "31023770050302",
+      "population": 582,
+      "workers": 7
+    },
+    {
+      "tract": "31023770060001",
+      "population": 1065,
+      "workers": 317
+    },
+    {
+      "tract": "31023770060101",
+      "population": 626,
+      "workers": 5
+    },
+    {
+      "tract": "31023770060102",
+      "population": 501,
+      "workers": 46
+    },
+    {
+      "tract": "31023770060103",
+      "population": 643,
+      "workers": 20
+    },
+    {
+      "tract": "31023780010001",
+      "population": 535,
+      "workers": 146
+    },
+    {
+      "tract": "31023780010002",
+      "population": 551,
+      "workers": 166
+    },
+    {
+      "tract": "31023780010003",
+      "population": 459,
+      "workers": 299
+    },
+    {
+      "tract": "31023780010004",
+      "population": 452,
+      "workers": 110
+    },
+    {
+      "tract": "31023780010005",
+      "population": 474,
+      "workers": 351
+    },
+    {
+      "tract": "31023780010006",
+      "population": 423,
+      "workers": 495
+    },
+    {
+      "tract": "31023780010007",
+      "population": 507,
+      "workers": 130
+    },
+    {
+      "tract": "31023780010008",
+      "population": 524,
+      "workers": 173
+    },
+    {
+      "tract": "31023780010009",
+      "population": 572,
+      "workers": 78
+    },
+    {
+      "tract": "31023780010010",
+      "population": 502,
+      "workers": 112
+    },
+    {
+      "tract": "31023780010011",
+      "population": 485,
+      "workers": 594
+    },
+    {
+      "tract": "31023780010101",
+      "population": 623,
+      "workers": 22
+    },
+    {
+      "tract": "31023780010102",
+      "population": 510,
+      "workers": 239
+    },
+    {
+      "tract": "31023780010103",
+      "population": 451,
+      "workers": 33
+    },
+    {
+      "tract": "31023780010104",
+      "population": 538,
+      "workers": 6
+    },
+    {
+      "tract": "31023780010105",
+      "population": 571,
+      "workers": 14
+    },
+    {
+      "tract": "31023780010106",
+      "population": 402,
+      "workers": 15
+    },
+    {
+      "tract": "31023780010107",
+      "population": 481,
+      "workers": 16
+    },
+    {
+      "tract": "31023780010108",
+      "population": 536,
+      "workers": 7
+    },
+    {
+      "tract": "31023780010109",
+      "population": 520,
+      "workers": 6
+    },
+    {
+      "tract": "31023780010110",
+      "population": 626,
+      "workers": 9
+    },
+    {
+      "tract": "31023780010201",
+      "population": 4926,
+      "workers": 188
+    },
+    {
+      "tract": "31023780020001",
+      "population": 474,
+      "workers": 330
+    },
+    {
+      "tract": "31023780020002",
+      "population": 649,
+      "workers": 1570
+    },
+    {
+      "tract": "31023780020101",
+      "population": 443,
+      "workers": 23
+    },
+    {
+      "tract": "31023780020102",
+      "population": 578,
+      "workers": 65
+    },
+    {
+      "tract": "31023780020103",
+      "population": 457,
+      "workers": 3
+    },
+    {
+      "tract": "31023780020201",
+      "population": 797,
+      "workers": 10
+    }
+  ]
+}

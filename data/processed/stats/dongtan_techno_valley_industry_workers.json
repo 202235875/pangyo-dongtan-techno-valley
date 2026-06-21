@@ -1,0 +1,98 @@
+{
+  "area": "dongtan_techno_valley",
+  "total_workers_classified": 9887.1,
+  "by_class": [
+    {
+      "class_code": "C",
+      "label": "제조업",
+      "workers": 2723.4,
+      "ratio": 27.5
+    },
+    {
+      "class_code": "M",
+      "label": "전문, 과학 및 기술 서비스업",
+      "workers": 1867.3,
+      "ratio": 18.9
+    },
+    {
+      "class_code": "G",
+      "label": "도매 및 소매업",
+      "workers": 1698.2,
+      "ratio": 17.2
+    },
+    {
+      "class_code": "F",
+      "label": "건설업",
+      "workers": 1194.5,
+      "ratio": 12.1
+    },
+    {
+      "class_code": "N",
+      "label": "사업시설 관리, 사업 지원 및 임대 서비스업",
+      "workers": 633.9,
+      "ratio": 6.4
+    },
+    {
+      "class_code": "J",
+      "label": "정보통신업",
+      "workers": 613.2,
+      "ratio": 6.2
+    },
+    {
+      "class_code": "L",
+      "label": "부동산업",
+      "workers": 519.4,
+      "ratio": 5.3
+    },
+    {
+      "class_code": "I",
+      "label": "숙박 및 음식점업",
+      "workers": 205.3,
+      "ratio": 2.1
+    },
+    {
+      "class_code": "P",
+      "label": "교육 서비스업",
+      "workers": 171.1,
+      "ratio": 1.7
+    },
+    {
+      "class_code": "H",
+      "label": "운수 및 창고업",
+      "workers": 127.1,
+      "ratio": 1.3
+    },
+    {
+      "class_code": "S",
+      "label": "협회 및 단체, 수리 및 기타 개인 서비스업",
+      "workers": 47.4,
+      "ratio": 0.5
+    },
+    {
+      "class_code": "Q",
+      "label": "보건업 및 사회복지 서비스업",
+      "workers": 44.6,
+      "ratio": 0.5
+    },
+    {
+      "class_code": "K",
+      "label": "금융 및 보험업",
+      "workers": 18.3,
+      "ratio": 0.2
+    },
+    {
+      "class_code": "R",
+      "label": "예술, 스포츠 및 여가관련 서비스업",
+      "workers": 16.1,
+      "ratio": 0.2
+    },
+    {
+      "class_code": "A",
+      "label": "농업, 임업 및 어업",
+      "workers": 7.3,
+      "ratio": 0.1
+    }
+  ],
+  "suppressed_rows": 19,
+  "note": "10차 대분류 기준, 구역계와 교차하는 SGIS 집계구를 면적 가중 합산. SGIS 비공개(N/A) 처리 행은 0으로 집계되어 과소평가될 수 있음. 10차 중분류 코드명 매핑은 아직 수집되지 않아 제외함."
+}

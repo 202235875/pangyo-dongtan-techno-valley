@@ -1,0 +1,78 @@
+{
+  "area": "pangyo_phase1",
+  "years": [
+    {
+      "year": 2009,
+      "count": 9,
+      "floor_area": 407266.1,
+      "cumulative_count": 9,
+      "cumulative_floor_area": 407266.1
+    },
+    {
+      "year": 2010,
+      "count": 6,
+      "floor_area": 139856.3,
+      "cumulative_count": 15,
+      "cumulative_floor_area": 547122.3
+    },
+    {
+      "year": 2011,
+      "count": 25,
+      "floor_area": 1669626.2,
+      "cumulative_count": 40,
+      "cumulative_floor_area": 2216748.5
+    },
+    {
+      "year": 2012,
+      "count": 18,
+      "floor_area": 995674.4,
+      "cumulative_count": 58,
+      "cumulative_floor_area": 3212422.9
+    },
+    {
+      "year": 2013,
+      "count": 12,
+      "floor_area": 394706.6,
+      "cumulative_count": 70,
+      "cumulative_floor_area": 3607129.5
+    },
+    {
+      "year": 2014,
+      "count": 11,
+      "floor_area": 393729.5,
+      "cumulative_count": 81,
+      "cumulative_floor_area": 4000859
+    },
+    {
+      "year": 2015,
+      "count": 8,
+      "floor_area": 291528.9,
+      "cumulative_count": 89,
+      "cumulative_floor_area": 4292387.9
+    },
+    {
+      "year": 2016,
+      "count": 2,
+      "floor_area": 79187.4,
+      "cumulative_count": 91,
+      "cumulative_floor_area": 4371575.3
+    },
+    {
+      "year": 2020,
+      "count": 2,
+      "floor_area": 69732.3,
+      "cumulative_count": 93,
+      "cumulative_floor_area": 4441307.6
+    }
+  ],
+  "total_with_date": 93,
+  "total_without_date": 7,
+  "peak_year": {
+    "year": 2011,
+    "count": 25
+  },
+  "since_2020": {
+    "count": 2,
+    "ratio": 2.2
+  }
+}

@@ -1,0 +1,11 @@
+﻿{
+    "files":  [
+                  "gyeonggi_population_2020_low2",
+                  "gyeonggi_household_2020_low2",
+                  "gyeonggi_company_2019_low2",
+                  "industry_codes_10th"
+              ],
+    "collected_at":  "2026-06-17T07:21:00",
+    "source":  "SGIS OpenAPI3",
+    "note":  "Keys are read from .env and are not stored in this metadata."
+}

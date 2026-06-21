@@ -1,0 +1,299 @@
+{
+  "source": "data/raw/business/소상공인시장진흥공단_상가(상권)정보_경기_202603.csv",
+  "method": "point_in_boundary",
+  "count": 2465,
+  "by_large_category": [
+    {
+      "label": "과학·기술",
+      "count": 1028
+    },
+    {
+      "label": "음식",
+      "count": 417
+    },
+    {
+      "label": "소매",
+      "count": 415
+    },
+    {
+      "label": "부동산",
+      "count": 195
+    },
+    {
+      "label": "시설관리·임대",
+      "count": 176
+    },
+    {
+      "label": "수리·개인",
+      "count": 107
+    },
+    {
+      "label": "교육",
+      "count": 84
+    },
+    {
+      "label": "예술·스포츠",
+      "count": 34
+    },
+    {
+      "label": "보건의료",
+      "count": 7
+    },
+    {
+      "label": "숙박",
+      "count": 2
+    }
+  ],
+  "by_middle_category": [
+    {
+      "label": "본사·경영 컨설팅",
+      "count": 304
+    },
+    {
+      "label": "기술 서비스",
+      "count": 211
+    },
+    {
+      "label": "부동산 서비스",
+      "count": 195
+    },
+    {
+      "label": "광고",
+      "count": 174
+    },
+    {
+      "label": "한식",
+      "count": 172
+    },
+    {
+      "label": "전문 디자인",
+      "count": 130
+    },
+    {
+      "label": "비알코올 ",
+      "count": 106
+    },
+    {
+      "label": "회계·세무",
+      "count": 74
+    },
+    {
+      "label": "기타 상품 소매",
+      "count": 64
+    },
+    {
+      "label": "기타 간이",
+      "count": 58
+    },
+    {
+      "label": "섬유·의복·신발 소매",
+      "count": 55
+    },
+    {
+      "label": "종합 소매",
+      "count": 51
+    }
+  ],
+  "samples": [
+    {
+      "name": "에이치알씨앤씨",
+      "large_category": "과학·기술",
+      "middle_category": "본사·경영 컨설팅",
+      "small_category": "경영 컨설팅업",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄대로 677-12",
+      "lon": 127.100157149085,
+      "lat": 37.2149343881152
+    },
+    {
+      "name": "사이로건축사사무소",
+      "large_category": "과학·기술",
+      "middle_category": "기술 서비스",
+      "small_category": "건축 설계 및 관련 서비스업",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄첨단산업1로 27",
+      "lon": 127.089472108373,
+      "lat": 37.2110233750325
+    },
+    {
+      "name": "이디야화성동탄SK",
+      "large_category": "음식",
+      "middle_category": "비알코올 ",
+      "small_category": "카페",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄순환대로 830",
+      "lon": 127.097063858006,
+      "lat": 37.2099902005355
+    },
+    {
+      "name": "더나날이컴퍼니",
+      "large_category": "음식",
+      "middle_category": "비알코올 ",
+      "small_category": "카페",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄첨단산업1로 27",
+      "lon": 127.089472108373,
+      "lat": 37.2110233750325
+    },
+    {
+      "name": "케이식스",
+      "large_category": "시설관리·임대",
+      "middle_category": "시설관리",
+      "small_category": "사업시설 유지·관리 서비스업",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄기흥로 594-7",
+      "lon": 127.094691224163,
+      "lat": 37.2135062151786
+    },
+    {
+      "name": "땡큐꼬마김밥동탄",
+      "large_category": "음식",
+      "middle_category": "기타 간이",
+      "small_category": "김밥/만두/분식",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄대로 637",
+      "lon": 127.098247730689,
+      "lat": 37.2107551170393
+    },
+    {
+      "name": "이기자투어",
+      "large_category": "시설관리·임대",
+      "middle_category": "여행사·보조",
+      "small_category": "여행사",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄대로 677-5",
+      "lon": 127.099716448814,
+      "lat": 37.2139345951421
+    },
+    {
+      "name": "케이에이치제이",
+      "large_category": "과학·기술",
+      "middle_category": "본사·경영 컨설팅",
+      "small_category": "경영 컨설팅업",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄기흥로 570-6",
+      "lon": 127.093167128396,
+      "lat": 37.2109214109664
+    },
+    {
+      "name": "시스펙주",
+      "large_category": "시설관리·임대",
+      "middle_category": "기타 사업 서비스",
+      "small_category": "포장/충전업",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄순환대로 830",
+      "lon": 127.097063858006,
+      "lat": 37.2099902005355
+    },
+    {
+      "name": "서현건축",
+      "large_category": "과학·기술",
+      "middle_category": "기술 서비스",
+      "small_category": "건축 설계 및 관련 서비스업",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄기흥로 557",
+      "lon": 127.092185908761,
+      "lat": 37.2100121181284
+    },
+    {
+      "name": "민이아이스크림",
+      "large_category": "소매",
+      "middle_category": "종합 소매",
+      "small_category": "슈퍼마켓",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄대로 683",
+      "lon": 127.100607069449,
+      "lat": 37.2143843667396
+    },
+    {
+      "name": "다온세무회계",
+      "large_category": "과학·기술",
+      "middle_category": "회계·세무",
+      "small_category": "세무사",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄기흥로 602",
+      "lon": 127.095052517544,
+      "lat": 37.2141276499563
+    },
+    {
+      "name": "베스트",
+      "large_category": "소매",
+      "middle_category": "가전·통신 소매",
+      "small_category": "가전제품 소매업",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄기흥로 560",
+      "lon": 127.094158663288,
+      "lat": 37.2110467739463
+    },
+    {
+      "name": "하리",
+      "large_category": "과학·기술",
+      "middle_category": "광고",
+      "small_category": "광고 대행업",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄대로 683",
+      "lon": 127.100607069449,
+      "lat": 37.2143843667396
+    },
+    {
+      "name": "이에스커뮤니케이션",
+      "large_category": "과학·기술",
+      "middle_category": "광고",
+      "small_category": "광고물 설계/제작업",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄기흥로 590",
+      "lon": 127.094352356422,
+      "lat": 37.2127946564048
+    },
+    {
+      "name": "동탄실리콘앨리0C07동0713;0714호지산",
+      "large_category": "과학·기술",
+      "middle_category": "본사·경영 컨설팅",
+      "small_category": "경영 컨설팅업",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄대로 725",
+      "lon": 127.103472885863,
+      "lat": 37.2174634859232
+    },
+    {
+      "name": "아이와이에스",
+      "large_category": "과학·기술",
+      "middle_category": "본사·경영 컨설팅",
+      "small_category": "경영 컨설팅업",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄기흥로 559",
+      "lon": 127.092288264168,
+      "lat": 37.210804962454
+    },
+    {
+      "name": "로얄공인중개사사무소",
+      "large_category": "부동산",
+      "middle_category": "부동산 서비스",
+      "small_category": "부동산 중개/대리업",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄대로 677-5",
+      "lon": 127.099716448814,
+      "lat": 37.2139345951421
+    },
+    {
+      "name": "골프와사람들",
+      "large_category": "과학·기술",
+      "middle_category": "기타 전문 과학",
+      "small_category": "사업/무형 재산권 중개업",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄첨단산업1로 27",
+      "lon": 127.089472108373,
+      "lat": 37.2110233750325
+    },
+    {
+      "name": "제이앤에스",
+      "large_category": "소매",
+      "middle_category": "의약·화장품 소매",
+      "small_category": "의료기기 소매업",
+      "sigungu": "화성시 동탄구",
+      "address": "경기도 화성시 동탄구 동탄기흥로 590",
+      "lon": 127.094352356422,
+      "lat": 37.2127946564048
+    }
+  ]
+}

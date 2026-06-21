@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>판교 · 동탄 비교분석 시스템</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script defer src="https://unpkg.com/shpjs@6.2.0/dist/shp.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">analysis system</div>
+      <h1>판교 테크노밸리 · 동탄 테크노밸리 비교분석</h1>
+    </div>
+    <div class="topbar-meta">
+      <span id="generatedAt">loading</span>
+      <span id="dataStatus">data</span>
+    </div>
+  </header>
+
+  <main class="shell">
+
+    <!-- ── 판교 테크노밸리 ──────────────────────────────────────────────── -->
+    <section class="area-section">
+      <div class="area-head">
+        <div class="area-head-left">
+          <h2 id="pangyoTitle">판교 테크노밸리 1단계</h2>
+          <p id="pangyoMeta"></p>
+        </div>
+        <div class="layer-buttons" data-map="pangyo">
+          <button data-layer="boundary"  class="toggle active">경계</button>
+          <button data-layer="parcels"   class="toggle">필지</button>
+          <button data-layer="buildings" class="toggle active">건축물</button>
+          <button data-layer="roads"     class="toggle active">도로</button>
+        </div>
+      </div>
+      <div class="area-body">
+        <div class="area-map-wrap">
+          <div id="pangyoMap" class="map"></div>
+          <div class="map-footer" id="pangyoFoot"></div>
+        </div>
+        <div class="stats-panel" id="pangyoStatsPanel">
+          <div class="stats-loading">통계 로딩 중…</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 동탄 테크노밸리 ──────────────────────────────────────────────── -->
+    <section class="area-section">
+      <div class="area-head">
+        <div class="area-head-left">
+          <h2 id="dongtanTitle">동탄 테크노밸리</h2>
+          <p id="dongtanMeta"></p>
+        </div>
+        <div class="layer-buttons" data-map="dongtan">
+          <button data-layer="boundary"  class="toggle active">경계</button>
+          <button data-layer="parcels"   class="toggle">필지</button>
+          <button data-layer="buildings" class="toggle active">건축물</button>
+          <button data-layer="roads"     class="toggle active">도로</button>
+        </div>
+      </div>
+      <div class="area-body">
+        <div class="area-map-wrap">
+          <div id="dongtanMap" class="map"></div>
+          <div class="map-footer" id="dongtanFoot"></div>
+        </div>
+        <div class="stats-panel" id="dongtanStatsPanel">
+          <div class="stats-loading">통계 로딩 중…</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Bottom: compare table ─────────────────────────────────────────── -->
+    <section class="advanced-compare-section">
+      <div class="panel advanced-compare-panel">
+        <div class="panel-header">
+          <h2>핵심 비교</h2>
+        </div>
+        <div id="advancedCompareBody" class="compare-cards">
+          <div class="compare-loading">비교 통계 계산 중</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

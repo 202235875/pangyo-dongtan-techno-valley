@@ -1,0 +1,110 @@
+{
+  "area": "pangyo_phase1",
+  "total_workers_classified": 48855.3,
+  "by_class": [
+    {
+      "class_code": "J",
+      "label": "정보통신업",
+      "workers": 22147.3,
+      "ratio": 45.3
+    },
+    {
+      "class_code": "M",
+      "label": "전문, 과학 및 기술 서비스업",
+      "workers": 8555.4,
+      "ratio": 17.5
+    },
+    {
+      "class_code": "N",
+      "label": "사업시설 관리, 사업 지원 및 임대 서비스업",
+      "workers": 6224.8,
+      "ratio": 12.7
+    },
+    {
+      "class_code": "G",
+      "label": "도매 및 소매업",
+      "workers": 4506.4,
+      "ratio": 9.2
+    },
+    {
+      "class_code": "C",
+      "label": "제조업",
+      "workers": 1594.5,
+      "ratio": 3.3
+    },
+    {
+      "class_code": "F",
+      "label": "건설업",
+      "workers": 1249.4,
+      "ratio": 2.6
+    },
+    {
+      "class_code": "I",
+      "label": "숙박 및 음식점업",
+      "workers": 1163,
+      "ratio": 2.4
+    },
+    {
+      "class_code": "K",
+      "label": "금융 및 보험업",
+      "workers": 1150.3,
+      "ratio": 2.4
+    },
+    {
+      "class_code": "L",
+      "label": "부동산업",
+      "workers": 890.6,
+      "ratio": 1.8
+    },
+    {
+      "class_code": "Q",
+      "label": "보건업 및 사회복지 서비스업",
+      "workers": 457.4,
+      "ratio": 0.9
+    },
+    {
+      "class_code": "P",
+      "label": "교육 서비스업",
+      "workers": 269.1,
+      "ratio": 0.6
+    },
+    {
+      "class_code": "S",
+      "label": "협회 및 단체, 수리 및 기타 개인 서비스업",
+      "workers": 253.8,
+      "ratio": 0.5
+    },
+    {
+      "class_code": "H",
+      "label": "운수 및 창고업",
+      "workers": 247.1,
+      "ratio": 0.5
+    },
+    {
+      "class_code": "R",
+      "label": "예술, 스포츠 및 여가관련 서비스업",
+      "workers": 90.8,
+      "ratio": 0.2
+    },
+    {
+      "class_code": "E",
+      "label": "수도, 하수 및 폐기물 처리, 원료 재생업",
+      "workers": 22.6,
+      "ratio": 0
+    },
+    {
+      "class_code": "D",
+      "label": "전기, 가스, 증기 및 공기 조절 공급업",
+      "workers": 22.3,
+      "ratio": 0
+    },
+    {
+      "class_code": "O",
+      "label": "공공 행정, 국방 및 사회보장 행정",
+      "workers": 10.5,
+      "ratio": 0
+    }
+  ],
+  "suppressed_rows": 2,
+  "note": "10차 대분류 기준, 구역계와 교차하는 SGIS 집계구를 면적 가중 합산. SGIS 비공개(N/A) 처리 행은 0으로 집계되어 과소평가될 수 있음. 10차 중분류 코드명 매핑은 아직 수집되지 않아 제외함."
+}

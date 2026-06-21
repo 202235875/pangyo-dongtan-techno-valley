@@ -1,0 +1,18 @@
+{
+  "crs": "EPSG:4326",
+  "note": "Temporary collection bounding boxes for initial raw data gathering. Replace or clip them with official district or unit-plan boundaries before final analysis.",
+  "areas": {
+    "pangyo_techno_valley": {
+      "label": "Pangyo Techno Valley Phase 1",
+      "bbox_south_west_north_east": [37.397786, 127.094914, 37.409217, 127.114846],
+      "core_station_candidates": ["Pangyo"],
+      "source_note": "Collection bbox padded from user-provided REALPANGYO Phase 1 boundary."
+    },
+    "dongtan_techno_valley": {
+      "label": "Dongtan Techno Valley",
+      "bbox_south_west_north_east": [37.207335, 127.083932, 37.223446, 127.111691],
+      "core_station_candidates": ["Dongtan"],
+      "source_note": "Collection bbox padded from user-provided Dongtan Techno Valley boundary."
+    }
+  }
+}

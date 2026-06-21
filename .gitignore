@@ -1,0 +1,21 @@
+# Secrets — never commit API keys
+.env
+
+# Debug/log artifacts from ad-hoc preprocessing runs
+_debug*.txt
+_preprocess_log.txt
+
+# Raw data inputs that are only consumed by the Node build pipeline
+# (scripts/build_app_data.js) and never fetched by the deployed site.
+# They're also too large for GitHub (the business CSV/zip exceed the
+# 100MB per-file hard limit). Keep them locally for reproducibility;
+# re-download/re-export them if you need to rebuild from scratch.
+data/raw/business/
+data/raw/vworld/
+data/raw/building_registry_manual/
+data/raw/sgis/census_tract_stats/
+data/raw/osm/
+
+# OS junk
+.DS_Store
+Thumbs.db

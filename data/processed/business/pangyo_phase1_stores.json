@@ -1,0 +1,299 @@
+{
+  "source": "data/raw/business/소상공인시장진흥공단_상가(상권)정보_경기_202603.csv",
+  "method": "point_in_boundary",
+  "count": 1007,
+  "by_large_category": [
+    {
+      "label": "음식",
+      "count": 461
+    },
+    {
+      "label": "과학·기술",
+      "count": 195
+    },
+    {
+      "label": "소매",
+      "count": 150
+    },
+    {
+      "label": "시설관리·임대",
+      "count": 43
+    },
+    {
+      "label": "교육",
+      "count": 38
+    },
+    {
+      "label": "수리·개인",
+      "count": 38
+    },
+    {
+      "label": "보건의료",
+      "count": 30
+    },
+    {
+      "label": "예술·스포츠",
+      "count": 28
+    },
+    {
+      "label": "부동산",
+      "count": 22
+    },
+    {
+      "label": "숙박",
+      "count": 2
+    }
+  ],
+  "by_middle_category": [
+    {
+      "label": "한식",
+      "count": 170
+    },
+    {
+      "label": "비알코올 ",
+      "count": 100
+    },
+    {
+      "label": "본사·경영 컨설팅",
+      "count": 68
+    },
+    {
+      "label": "기타 간이",
+      "count": 47
+    },
+    {
+      "label": "일식",
+      "count": 47
+    },
+    {
+      "label": "종합 소매",
+      "count": 42
+    },
+    {
+      "label": "전문 디자인",
+      "count": 39
+    },
+    {
+      "label": "의원",
+      "count": 29
+    },
+    {
+      "label": "서양식",
+      "count": 27
+    },
+    {
+      "label": "구내식당·뷔페",
+      "count": 27
+    },
+    {
+      "label": "기타 교육",
+      "count": 25
+    },
+    {
+      "label": "광고",
+      "count": 25
+    }
+  ],
+  "samples": [
+    {
+      "name": "라뜰리에에코허브지점",
+      "large_category": "음식",
+      "middle_category": "비알코올 ",
+      "small_category": "카페",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 판교로 332",
+      "lon": 127.110481159091,
+      "lat": 37.4027729597884
+    },
+    {
+      "name": "와이블라썸",
+      "large_category": "교육",
+      "middle_category": "기타 교육",
+      "small_category": "요가/필라테스 학원",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 대왕판교로 670",
+      "lon": 127.10610926848,
+      "lat": 37.4020741678968
+    },
+    {
+      "name": "라온네일클리닉",
+      "large_category": "수리·개인",
+      "middle_category": "이용·미용",
+      "small_category": "네일숍",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 판교역로 230",
+      "lon": 127.110456388287,
+      "lat": 37.4012862988488
+    },
+    {
+      "name": "바이온스",
+      "large_category": "음식",
+      "middle_category": "비알코올 ",
+      "small_category": "카페",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 판교로255번길 9-22",
+      "lon": 127.10009204247,
+      "lat": 37.4040256191178
+    },
+    {
+      "name": "인피니엄파트너스",
+      "large_category": "과학·기술",
+      "middle_category": "본사·경영 컨설팅",
+      "small_category": "경영 컨설팅업",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 판교로 344",
+      "lon": 127.112208812745,
+      "lat": 37.4025190471213
+    },
+    {
+      "name": "밀로헤어",
+      "large_category": "수리·개인",
+      "middle_category": "이용·미용",
+      "small_category": "미용실",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 판교역로 230",
+      "lon": 127.110456388287,
+      "lat": 37.4012862988488
+    },
+    {
+      "name": "빈티지1988",
+      "large_category": "음식",
+      "middle_category": "서양식",
+      "small_category": "경양식",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 판교역로 231",
+      "lon": 127.108649307789,
+      "lat": 37.4012699527293
+    },
+    {
+      "name": "육전면사무소",
+      "large_category": "음식",
+      "middle_category": "한식",
+      "small_category": "냉면/밀면",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 대왕판교로 660",
+      "lon": 127.106807220422,
+      "lat": 37.4004607122582
+    },
+    {
+      "name": "모노플립",
+      "large_category": "과학·기술",
+      "middle_category": "기타 전문 과학",
+      "small_category": "사업/무형 재산권 중개업",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 판교로255번길 9-22",
+      "lon": 127.10009204247,
+      "lat": 37.4040256191178
+    },
+    {
+      "name": "오토비즈플랜",
+      "large_category": "시설관리·임대",
+      "middle_category": "운송장비 대여",
+      "small_category": "자동차 대여업",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 판교역로 240",
+      "lon": 127.110457591771,
+      "lat": 37.4021062265679
+    },
+    {
+      "name": "그라비티",
+      "large_category": "음식",
+      "middle_category": "비알코올 ",
+      "small_category": "카페",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 대왕판교로 670",
+      "lon": 127.10610926848,
+      "lat": 37.4020741678968
+    },
+    {
+      "name": "아이콘컴퍼니",
+      "large_category": "부동산",
+      "middle_category": "부동산 서비스",
+      "small_category": "부동산 중개/대리업",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 판교역로226번길 16",
+      "lon": 127.111449147327,
+      "lat": 37.4005285097955
+    },
+    {
+      "name": "컴퓨터수리",
+      "large_category": "수리·개인",
+      "middle_category": "컴퓨터 수리",
+      "small_category": "컴퓨터/노트북/프린터 수리업",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 대왕판교로 670",
+      "lon": 127.10610926848,
+      "lat": 37.4020741678968
+    },
+    {
+      "name": "차엔",
+      "large_category": "음식",
+      "middle_category": "중식",
+      "small_category": "중국집",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 판교역로 235",
+      "lon": 127.108639197372,
+      "lat": 37.4020898908779
+    },
+    {
+      "name": "디엑스엘랩",
+      "large_category": "과학·기술",
+      "middle_category": "전문 디자인",
+      "small_category": "제품 디자인업",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 대왕판교로 660",
+      "lon": 127.106807220422,
+      "lat": 37.4004607122582
+    },
+    {
+      "name": "이지모바일",
+      "large_category": "소매",
+      "middle_category": "가전·통신 소매",
+      "small_category": "핸드폰 소매업",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 판교역로 240",
+      "lon": 127.110457591771,
+      "lat": 37.4021062265679
+    },
+    {
+      "name": "카페할로나",
+      "large_category": "음식",
+      "middle_category": "비알코올 ",
+      "small_category": "카페",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 판교로289번길 20",
+      "lon": 127.10580791014,
+      "lat": 37.4046243259424
+    },
+    {
+      "name": "윤영찬프로",
+      "large_category": "소매",
+      "middle_category": "오락용품 소매",
+      "small_category": "운동용품 소매업",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 대왕판교로 660",
+      "lon": 127.106807220422,
+      "lat": 37.4004607122582
+    },
+    {
+      "name": "엠피에스인터내셔널유",
+      "large_category": "과학·기술",
+      "middle_category": "본사·경영 컨설팅",
+      "small_category": "경영 컨설팅업",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 판교로 242",
+      "lon": 127.101106368752,
+      "lat": 37.4024029191259
+    },
+    {
+      "name": "휴먼영광에너지1호",
+      "large_category": "과학·기술",
+      "middle_category": "본사·경영 컨설팅",
+      "small_category": "경영 컨설팅업",
+      "sigungu": "성남시 분당구",
+      "address": "경기도 성남시 분당구 판교로255번길 9-22",
+      "lon": 127.10009204247,
+      "lat": 37.4040256191178
+    }
+  ]
+}
