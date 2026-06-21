@@ -1244,7 +1244,9 @@ function accessText(areaKey, minutes) {
   const pop = accessValue(areaKey, minutes, "population");
   const workers = accessValue(areaKey, minutes, "workers");
   const stations = accessValue(areaKey, minutes, "stationCount");
-  if (pop == null || workers == null || stations == null) return "계산 중";
+  if (pop == null || workers == null || stations == null) {
+    return "지도모드 등시간권에서<br>먼저 계산 필요";
+  }
   return `역 ${fmt(stations)}개<br>인구 ${fmt(pop)}명<br>종사자 ${fmt(workers)}명`;
 }
 
@@ -1435,7 +1437,9 @@ function accessDetailChart(minutes) {
     || state.isochroneStats?.pangyo_phase1?.curve?.find((point) => point.minutes === minutes);
   const d = state.isochroneStats?.dongtan_techno_valley?.values?.[minutes]
     || state.isochroneStats?.dongtan_techno_valley?.curve?.find((point) => point.minutes === minutes);
-  if (!p || !d) return `<div class="detail-note">등시간권 계산 완료 후 자동 갱신됩니다.</div>`;
+  if (!p || !d) {
+    return `<div class="detail-note">지도모드에서 등시간권 버튼을 누른 뒤 30분권 또는 60분권을 계산하면 이 비교가 자동 갱신됩니다.</div>`;
+  }
   return `
     ${metricComparisonChart(`${minutes}분 도달 역 수`, p.stationCount, d.stationCount, { suffix: "개" })}
     ${metricComparisonChart(`${minutes}분 도달가능 인구`, p.population, d.population, { suffix: "명" })}
@@ -1447,7 +1451,7 @@ function accessCurveComparisonHtml() {
   const pCurve = state.isochroneStats?.pangyo_phase1?.curve;
   const dCurve = state.isochroneStats?.dongtan_techno_valley?.curve;
   if (!pCurve?.length || !dCurve?.length) {
-    return `<div class="detail-note">등시간권 계산 완료 후 누적 접근성 곡선이 표시됩니다.</div>`;
+    return `<div class="detail-note">누적 접근성 곡선은 지도모드 등시간권에서 분권 계산을 완료한 뒤 표시됩니다.</div>`;
   }
   const pLast = pCurve[pCurve.length - 1];
   const dLast = dCurve[dCurve.length - 1];
