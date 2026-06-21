@@ -13,6 +13,7 @@ const state = {
   activeModeLayer: {},
   currentMode: "building_use",
   compareInputsPromise: null,
+  accessibilityCurvesPromise: null,
   shpCache: new Map(),
 };
 
@@ -429,16 +430,22 @@ async function ensureAccessibilityCurve(areaKey, network, starts) {
   }
 }
 
-async function preloadAccessibilityCurves() {
-  try {
-    const network = await loadSubwayNetwork();
-    await Promise.all(Object.keys(ISOCHRONE_CONFIGS).map((areaKey) => {
-      const starts = stationNodesForArea(network, areaKey);
-      return ensureAccessibilityCurve(areaKey, network, starts);
-    }));
-  } catch (error) {
-    console.warn("Accessibility curve preload failed", error);
-  }
+async function ensureAccessibilityCurves() {
+  if (state.accessibilityCurvesPromise) return state.accessibilityCurvesPromise;
+
+  state.accessibilityCurvesPromise = (async () => {
+    try {
+      const network = await loadSubwayNetwork();
+      await Promise.all(Object.keys(ISOCHRONE_CONFIGS).map((areaKey) => {
+        const starts = stationNodesForArea(network, areaKey);
+        return ensureAccessibilityCurve(areaKey, network, starts);
+      }));
+    } catch (error) {
+      console.warn("Accessibility curve preload failed", error);
+    }
+  })();
+
+  return state.accessibilityCurvesPromise;
 }
 
 function renderIsochroneStatsPanel(areaKey) {
@@ -1539,6 +1546,7 @@ async function renderCompareTable() {
   }
   const [pLand, dLand, pBuild, dBuild, pTimeline, dTimeline, pIndustry, dIndustry] =
     await state.compareInputsPromise;
+  await ensureAccessibilityCurves();
   const pMetric = state.metrics.pangyo_phase1;
   const dMetric = state.metrics.dongtan_techno_valley;
   const farBars = compareDualBar(pBuild.avgFar, dBuild.avgFar, "%", 1);
@@ -1785,7 +1793,7 @@ async function main() {
   addIsochroneStatsPanel(state.maps.pangyo_phase1, "pangyo_phase1");
   addIsochroneControl(state.maps.dongtan_techno_valley, "dongtan_techno_valley");
   addIsochroneStatsPanel(state.maps.dongtan_techno_valley, "dongtan_techno_valley");
-  preloadAccessibilityCurves();
+  ensureAccessibilityCurves();
 }
 
 main().catch((err) => {
