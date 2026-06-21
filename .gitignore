@@ -19,3 +19,9 @@ data/raw/osm/
 # OS junk
 .DS_Store
 Thumbs.db
+
+# Ad-hoc local verification tooling (not part of the deployed app)
+node_modules/
+package.json
+package-lock.json
+_verify_tmp.js

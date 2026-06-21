@@ -26,55 +26,68 @@
 
   <main class="shell">
 
-    <!-- ── 판교 테크노밸리 ──────────────────────────────────────────────── -->
-    <section class="area-section">
-      <div class="area-head">
-        <div class="area-head-left">
-          <h2 id="pangyoTitle">판교 테크노밸리 1단계</h2>
-          <p id="pangyoMeta"></p>
-        </div>
-        <div class="layer-buttons" data-map="pangyo">
-          <button data-layer="boundary"  class="toggle active">경계</button>
-          <button data-layer="parcels"   class="toggle">필지</button>
-          <button data-layer="buildings" class="toggle active">건축물</button>
-          <button data-layer="roads"     class="toggle active">도로</button>
+    <!-- ── 지도 모드 전환 (두 지도 동시 적용) ──────────────────────────────── -->
+    <div class="mode-bar panel">
+      <div class="mode-bar-row">
+        <span class="mode-bar-label">지도 모드</span>
+        <div class="mode-buttons">
+          <button type="button" class="toggle active" data-mode="building_use">건물 주용도</button>
+          <button type="button" class="toggle" data-mode="landuse">용도지역</button>
+          <button type="button" class="toggle" data-mode="population">인구 (집계구)</button>
+          <button type="button" class="toggle" data-mode="workers">종사자 (집계구)</button>
         </div>
       </div>
-      <div class="area-body">
-        <div class="area-map-wrap">
-          <div id="pangyoMap" class="map"></div>
-          <div class="map-footer" id="pangyoFoot"></div>
-        </div>
-        <div class="stats-panel" id="pangyoStatsPanel">
-          <div class="stats-loading">통계 로딩 중…</div>
-        </div>
-      </div>
-    </section>
+      <div id="modeLegend" class="mode-legend"></div>
+    </div>
 
-    <!-- ── 동탄 테크노밸리 ──────────────────────────────────────────────── -->
-    <section class="area-section">
-      <div class="area-head">
-        <div class="area-head-left">
-          <h2 id="dongtanTitle">동탄 테크노밸리</h2>
-          <p id="dongtanMeta"></p>
+    <!-- ── 판교 · 동탄 지도 (한눈에 비교) ──────────────────────────────────── -->
+    <div class="compare-grid">
+      <section class="area-section">
+        <div class="area-head">
+          <div class="area-head-left">
+            <h2 id="pangyoTitle">판교 테크노밸리 1단계</h2>
+            <p id="pangyoMeta"></p>
+          </div>
+          <div class="layer-buttons" data-map="pangyo">
+            <button data-layer="boundary" class="toggle active">경계</button>
+            <button data-layer="parcels"  class="toggle">필지</button>
+            <button data-layer="roads"    class="toggle active">도로</button>
+          </div>
         </div>
-        <div class="layer-buttons" data-map="dongtan">
-          <button data-layer="boundary"  class="toggle active">경계</button>
-          <button data-layer="parcels"   class="toggle">필지</button>
-          <button data-layer="buildings" class="toggle active">건축물</button>
-          <button data-layer="roads"     class="toggle active">도로</button>
+        <div class="area-body">
+          <div class="area-map-wrap">
+            <div id="pangyoMap" class="map"></div>
+            <div class="map-footer" id="pangyoFoot"></div>
+          </div>
+          <div class="stats-panel" id="pangyoStatsPanel">
+            <div class="stats-loading">통계 로딩 중…</div>
+          </div>
         </div>
-      </div>
-      <div class="area-body">
-        <div class="area-map-wrap">
-          <div id="dongtanMap" class="map"></div>
-          <div class="map-footer" id="dongtanFoot"></div>
+      </section>
+
+      <section class="area-section">
+        <div class="area-head">
+          <div class="area-head-left">
+            <h2 id="dongtanTitle">동탄 테크노밸리</h2>
+            <p id="dongtanMeta"></p>
+          </div>
+          <div class="layer-buttons" data-map="dongtan">
+            <button data-layer="boundary" class="toggle active">경계</button>
+            <button data-layer="parcels"  class="toggle">필지</button>
+            <button data-layer="roads"    class="toggle active">도로</button>
+          </div>
         </div>
-        <div class="stats-panel" id="dongtanStatsPanel">
-          <div class="stats-loading">통계 로딩 중…</div>
+        <div class="area-body">
+          <div class="area-map-wrap">
+            <div id="dongtanMap" class="map"></div>
+            <div class="map-footer" id="dongtanFoot"></div>
+          </div>
+          <div class="stats-panel" id="dongtanStatsPanel">
+            <div class="stats-loading">통계 로딩 중…</div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <!-- ── Bottom: compare table ─────────────────────────────────────────── -->
     <section class="advanced-compare-section">

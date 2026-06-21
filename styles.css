@@ -869,7 +869,7 @@ h2 { font-size: 16px; }
 }
 
 .map {
-  height: 600px;
+  height: 520px;
 }
 
 .map-footer {
@@ -891,13 +891,72 @@ h2 { font-size: 16px; }
   line-height: 1.45;
 }
 
-.legend .swatch {
+.swatch {
   display: inline-block;
   width: 10px;
   height: 10px;
   border-radius: 2px;
   margin-right: 6px;
   vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* ── Map mode switcher (above the side-by-side maps) ── */
+.mode-bar-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.mode-bar-label {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mode-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.mode-legend {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.mode-legend span {
+  align-items: center;
+  color: var(--ink);
+  display: inline-flex;
+  font-size: 12px;
+}
+
+.mode-legend .legend-title {
+  color: var(--muted);
+  font-size: 11px;
+  margin-right: 4px;
+}
+
+/* ── Side-by-side map comparison grid ── */
+.compare-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 1400px) {
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .leaflet-control-zoom a {

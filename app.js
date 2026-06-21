@@ -7,6 +7,11 @@ const state = {
   isochrones: {},
   isochroneStats: {},
   isochroneTracts: {},
+  modeContext: {},
+  modeLayers: {},
+  activeModeLayer: {},
+  currentMode: "building_use",
+  shpCache: new Map(),
 };
 
 const COLORS = {
@@ -19,6 +24,26 @@ const COLORS = {
   retail:   "#f2994a",
   other:    "#c8ced6",
 };
+
+const LANDUSE_COLORS = {
+  "준주거지역": "#f2994a",
+  "일반상업지역": "#eb5757",
+  "근린상업지역": "#f2c94c",
+  "제1종일반주거지역": "#9b59b6",
+  "제2종일반주거지역": "#8e44ad",
+  "제3종일반주거지역": "#6c3483",
+  "자연녹지지역": "#27ae60",
+  "보전녹지지역": "#1e8449",
+  "공업지역": "#7f8c8d",
+};
+const LANDUSE_FALLBACK_COLOR = "#c8ced6";
+
+const BUILDING_USE_LEGEND = [
+  { label: "업무시설", color: COLORS.office },
+  { label: "공장/지식산업센터", color: COLORS.factory },
+  { label: "근린생활시설", color: COLORS.retail },
+  { label: "기타", color: COLORS.other },
+];
 
 const SUBWAY_SERVICE_CUTOFF = "2026-06-18";
 
@@ -101,6 +126,18 @@ function classifyBuildingUse(properties = {}) {
     if (floors >= 1) return { label: "근린생활시설", color: COLORS.retail };
   }
   return { label: use || "기타", color: COLORS.other };
+}
+
+function landuseColorFor(uname) {
+  const name = String(uname || "").trim();
+  return LANDUSE_COLORS[name] || LANDUSE_FALLBACK_COLOR;
+}
+
+function loadShpCached(zipPath) {
+  if (!state.shpCache.has(zipPath)) {
+    state.shpCache.set(zipPath, shp(zipPath));
+  }
+  return state.shpCache.get(zipPath);
 }
 
 function isSubwayRowInService(row) {
@@ -241,7 +278,7 @@ async function loadTractsForIsochrone(areaKey) {
     "data/raw/sgis/census_tract_shp/bnd_oa_31023_2025_2Q.zip",
     "data/raw/sgis/census_tract_shp/bnd_oa_31240_2025_2Q.zip",
   ];
-  const geojsons = await Promise.all(shpZips.map((zipPath) => shp(zipPath)));
+  const geojsons = await Promise.all(shpZips.map((zipPath) => loadShpCached(zipPath)));
   const features = geojsons.flatMap((result) => {
     const geojson = Array.isArray(result) ? result[0] : result;
     return geojson?.features || [];
@@ -702,6 +739,184 @@ async function loadGeoJsonLayer(url, style, boundaryFeature = null, options = {}
   return L.geoJSON(clipGeoJsonToBoundary(data, boundaryFeature), { ...options, style });
 }
 
+// ── Map mode: 용도지역 (zoning) ─────────────────────────────────────────────
+async function loadLanduseLayer(area, boundaryFeature) {
+  const data = await loadJson(area.vworld.landuse.geojson);
+  const clipped = clipGeoJsonToBoundary(data, boundaryFeature);
+  return L.geoJSON(clipped, {
+    style: (feature) => ({
+      color: "#55555599",
+      weight: 0.5,
+      fillColor: landuseColorFor(feature.properties?.uname),
+      fillOpacity: 0.55,
+    }),
+    onEachFeature: (feature, layer) => {
+      layer.bindTooltip(feature.properties?.uname || "미분류", { sticky: true });
+    },
+  });
+}
+
+// ── Map mode: 인구/종사자 집계구 choropleth ─────────────────────────────────
+function styleTractFeature(feature, maxValue, metricKey) {
+  const value = num(feature.properties?.[metricKey]);
+  const ratio = maxValue > 0 ? value / maxValue : 0;
+  const fillColor =
+    ratio > 0.75 ? "#224f9c" :
+    ratio > 0.5  ? "#3f71b6" :
+    ratio > 0.25 ? "#7e9fca" :
+    ratio > 0.05 ? "#bfd0e3" :
+    "#eef3f8";
+  return { color: "#7a8a99", weight: 1, opacity: 0.8, fillColor, fillOpacity: 0.55 };
+}
+
+async function buildTractChoroplethLayer(area, boundaryFeature) {
+  const stats = await loadJson(area.sgis.tract_stats);
+  const zip = await loadShpCached(area.sgis.shp_zip);
+  const geojson = Array.isArray(zip) ? zip[0] : zip;
+  const selectedCodes = new Set(stats.selected_codes || []);
+  const statByTract = new Map(stats.tracts.map((row) => [row.tract, row]));
+
+  const clippedFeatures = [];
+  (geojson.features || []).forEach((feature) => {
+    const code =
+      feature.properties?.TOT_OA_CD ||
+      feature.properties?.tot_oa_cd ||
+      feature.properties?.OA_CD ||
+      feature.properties?.oa_cd;
+    let include = Boolean(selectedCodes.size && code && selectedCodes.has(code));
+    try { if (!include && turf.booleanIntersects(feature, boundaryFeature)) include = true; } catch {}
+    try { if (!include) include = turf.booleanPointInPolygon(turf.centerOfMass(feature), boundaryFeature); } catch {}
+    if (!include) return;
+    const clipped = clipFeatureToBoundary(feature, boundaryFeature);
+    pushClippedFeature(clippedFeatures, clipped, feature.properties);
+  });
+
+  const features = clippedFeatures.map((feature) => {
+    const code =
+      feature.properties?.TOT_OA_CD ||
+      feature.properties?.tot_oa_cd ||
+      feature.properties?.OA_CD ||
+      feature.properties?.oa_cd;
+    const row = statByTract.get(code) || {};
+    return {
+      ...feature,
+      properties: {
+        ...feature.properties,
+        population: num(row.population),
+        workers: num(row.workers),
+      },
+    };
+  });
+
+  const maxPopulation = Math.max(1, ...stats.tracts.map((row) => num(row.population)));
+  const maxWorkers = Math.max(1, ...stats.tracts.map((row) => num(row.workers)));
+
+  const layer = L.geoJSON({ type: "FeatureCollection", features }, {
+    style: (feature) => styleTractFeature(feature, maxPopulation, "population"),
+    onEachFeature: (feature, tractLayer) => {
+      const code =
+        feature.properties?.TOT_OA_CD ||
+        feature.properties?.tot_oa_cd ||
+        feature.properties?.OA_CD ||
+        feature.properties?.oa_cd;
+      tractLayer.bindTooltip(
+        `집계구 ${code || "unknown"}<br>인구 ${fmt(num(feature.properties.population))}명<br>종사자 ${fmt(num(feature.properties.workers))}명`,
+        { sticky: true }
+      );
+    },
+  });
+
+  return { layer, maxPopulation, maxWorkers };
+}
+
+function restyleTractLayer(info, metric) {
+  if (!info?.layer) return;
+  const maxValue = metric === "workers" ? info.maxWorkers : info.maxPopulation;
+  info.layer.setStyle((feature) => styleTractFeature(feature, maxValue, metric));
+}
+
+// ── Map mode switching (shared across both maps) ────────────────────────────
+async function ensureModeLayer(areaKey, mode) {
+  const ctx = state.modeContext[areaKey];
+  if (!ctx) return null;
+  const cache = state.modeLayers[areaKey];
+  if (mode === "building_use") return cache.building_use;
+  if (mode === "landuse") {
+    if (!cache.landuse) {
+      cache.landuse = await loadLanduseLayer(ctx.area, ctx.boundaryFeature);
+    }
+    return cache.landuse;
+  }
+  if (!cache.tract) {
+    cache.tract = await buildTractChoroplethLayer(ctx.area, ctx.boundaryFeature);
+  }
+  return cache.tract.layer;
+}
+
+async function setMapMode(mode) {
+  if (state.currentMode === mode) return;
+  const buttons = Array.from(document.querySelectorAll(".mode-buttons .toggle"));
+  buttons.forEach((button) => { button.disabled = true; });
+  try {
+    for (const areaKey of Object.keys(state.modeContext)) {
+      const ctx = state.modeContext[areaKey];
+      const layer = await ensureModeLayer(areaKey, mode);
+      const current = state.activeModeLayer[areaKey];
+      if (current && ctx.map.hasLayer(current)) ctx.map.removeLayer(current);
+      if (layer) {
+        if (mode === "population" || mode === "workers") {
+          restyleTractLayer(state.modeLayers[areaKey].tract, mode);
+        }
+        layer.addTo(ctx.map);
+      }
+      state.activeModeLayer[areaKey] = layer;
+    }
+    state.currentMode = mode;
+    buttons.forEach((button) => {
+      button.classList.toggle("active", button.dataset.mode === mode);
+    });
+    renderModeLegend(mode);
+  } finally {
+    buttons.forEach((button) => { button.disabled = false; });
+  }
+}
+
+function renderModeLegend(mode) {
+  const el = document.getElementById("modeLegend");
+  if (!el) return;
+
+  if (mode === "building_use") {
+    el.innerHTML = BUILDING_USE_LEGEND
+      .map((item) => `<span><i class="swatch" style="background:${item.color}"></i>${item.label}</span>`)
+      .join("");
+    return;
+  }
+
+  if (mode === "landuse") {
+    const entries = Object.entries(LANDUSE_COLORS)
+      .map(([label, color]) => `<span><i class="swatch" style="background:${color}"></i>${label}</span>`)
+      .join("");
+    el.innerHTML = `${entries}<span><i class="swatch" style="background:${LANDUSE_FALLBACK_COLOR}"></i>기타/미분류</span>`;
+    return;
+  }
+
+  const metricLabel = mode === "workers" ? "종사자" : "인구";
+  el.innerHTML = `
+    <span class="legend-title">${metricLabel} (지역 내 최댓값 기준 상대 비교)</span>
+    <span><i class="swatch" style="background:#224f9c"></i>매우 높음</span>
+    <span><i class="swatch" style="background:#3f71b6"></i>높음</span>
+    <span><i class="swatch" style="background:#7e9fca"></i>중간</span>
+    <span><i class="swatch" style="background:#bfd0e3"></i>낮음</span>
+    <span><i class="swatch" style="background:#eef3f8"></i>매우 낮음</span>
+  `;
+}
+
+function bindModeButtons() {
+  document.querySelectorAll(".mode-buttons .toggle").forEach((button) => {
+    button.addEventListener("click", () => setMapMode(button.dataset.mode));
+  });
+}
+
 // ── Donut chart (pure SVG, no library) ────────────────────────────────────────
 function makeSvgDonut(items) {
   const nonZero = items.filter(d => d.연면적 > 0);
@@ -831,6 +1046,9 @@ async function loadArea(areaKey) {
   const areaKm2 = area.boundary.area_m2 > 0 ? area.boundary.area_m2 / 1e6 : 0;
 
   state.overlays[areaKey] = { boundary, parcels, buildings, roads };
+  state.modeContext[areaKey] = { area, boundaryFeature, map };
+  state.modeLayers[areaKey] = { building_use: buildings, landuse: null, tract: null };
+  state.activeModeLayer[areaKey] = buildings;
 
   buildings.addTo(map);
   roads.addTo(map);
@@ -1509,6 +1727,8 @@ async function main() {
 
   bindLayerButtons("pangyo_phase1");
   bindLayerButtons("dongtan_techno_valley");
+  bindModeButtons();
+  renderModeLegend(state.currentMode);
   renderCompareTable();
 
   addIsochroneControl(state.maps.pangyo_phase1, "pangyo_phase1");
