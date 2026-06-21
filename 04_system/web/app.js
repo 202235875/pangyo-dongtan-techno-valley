@@ -429,6 +429,18 @@ async function ensureAccessibilityCurve(areaKey, network, starts) {
   }
 }
 
+async function preloadAccessibilityCurves() {
+  try {
+    const network = await loadSubwayNetwork();
+    await Promise.all(Object.keys(ISOCHRONE_CONFIGS).map((areaKey) => {
+      const starts = stationNodesForArea(network, areaKey);
+      return ensureAccessibilityCurve(areaKey, network, starts);
+    }));
+  } catch (error) {
+    console.warn("Accessibility curve preload failed", error);
+  }
+}
+
 function renderIsochroneStatsPanel(areaKey) {
   const config = ISOCHRONE_CONFIGS[areaKey];
   const statsState = state.isochroneStats?.[areaKey];
@@ -1773,6 +1785,7 @@ async function main() {
   addIsochroneStatsPanel(state.maps.pangyo_phase1, "pangyo_phase1");
   addIsochroneControl(state.maps.dongtan_techno_valley, "dongtan_techno_valley");
   addIsochroneStatsPanel(state.maps.dongtan_techno_valley, "dongtan_techno_valley");
+  preloadAccessibilityCurves();
 }
 
 main().catch((err) => {
