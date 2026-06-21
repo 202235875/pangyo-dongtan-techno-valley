@@ -547,17 +547,6 @@ async function showSubwayIsochrone(map, areaKey, minutes, controls = {}) {
   }
 }
 
-async function initAccessibilityCurve(areaKey) {
-  try {
-    const network = await loadSubwayNetwork();
-    const starts = stationNodesForArea(network, areaKey);
-    if (!starts.length) return;
-    await ensureAccessibilityCurve(areaKey, network, starts);
-  } catch (error) {
-    console.warn("Accessibility curve failed", areaKey, error);
-  }
-}
-
 function addIsochroneControl(map, areaKey) {
   const control = L.control({ position: "topright" });
   control.onAdd = () => {
@@ -1803,8 +1792,6 @@ async function main() {
   addIsochroneStatsPanel(state.maps.pangyo_phase1, "pangyo_phase1");
   addIsochroneControl(state.maps.dongtan_techno_valley, "dongtan_techno_valley");
   addIsochroneStatsPanel(state.maps.dongtan_techno_valley, "dongtan_techno_valley");
-  initAccessibilityCurve("pangyo_phase1");
-  initAccessibilityCurve("dongtan_techno_valley");
 }
 
 main().catch((err) => {
