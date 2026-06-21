@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>?먭탳 쨌 ?숉깂 鍮꾧탳遺꾩꽍 ?쒖뒪??/title>
+  <title>판교-동탄 테크노밸리 비교분석 시스템</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="./04_system/web/styles.css?v=20260621-5" />
   <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -31,8 +31,8 @@
       <div class="mode-bar-row">
         <span class="mode-bar-label">吏??紐⑤뱶</span>
         <div class="mode-buttons">
-          <button type="button" class="toggle active" data-mode="building_use">嫄대Ъ 二쇱슜??/button>
-          <button type="button" class="toggle" data-mode="landuse">?⑸룄吏??/button>
+          <button type="button" class="toggle active" data-mode="building_use">건물 주용도</button>
+          <button type="button" class="toggle" data-mode="landuse">용도지역</button>
           <button type="button" class="toggle" data-mode="population">?멸뎄 (吏묎퀎援?</button>
           <button type="button" class="toggle" data-mode="workers">醫낆궗??(吏묎퀎援?</button>
           <button type="button" class="toggle" data-mode="isochrone">?깆떆媛꾧텒</button>
@@ -46,7 +46,7 @@
       <section class="area-section">
         <div class="area-head">
           <div class="area-head-left">
-            <h2 id="pangyoTitle">?? ?먭탳?뚰겕?몃갭由?/h2>
+            <h2 id="pangyoTitle">제1 판교테크노밸리</h2>
             <p id="pangyoMeta"></p>
           </div>
           <div class="layer-buttons" data-map="pangyo">
@@ -61,7 +61,7 @@
             <div class="map-footer" id="pangyoFoot"></div>
           </div>
           <div class="stats-panel" id="pangyoStatsPanel">
-            <div class="stats-loading">?듦퀎 濡쒕뵫 以묅?/div>
+            <div class="stats-loading">지표 로딩 중...</div>
           </div>
         </div>
       </section>
@@ -69,7 +69,7 @@
       <section class="area-section">
         <div class="area-head">
           <div class="area-head-left">
-            <h2 id="dongtanTitle">?숉깂 ?뚰겕?몃갭由?/h2>
+            <h2 id="dongtanTitle">동탄 테크노밸리</h2>
             <p id="dongtanMeta"></p>
           </div>
           <div class="layer-buttons" data-map="dongtan">
@@ -84,7 +84,7 @@
             <div class="map-footer" id="dongtanFoot"></div>
           </div>
           <div class="stats-panel" id="dongtanStatsPanel">
-            <div class="stats-loading">?듦퀎 濡쒕뵫 以묅?/div>
+            <div class="stats-loading">지표 로딩 중...</div>
           </div>
         </div>
       </section>
@@ -97,7 +97,7 @@
           <h2>?듭떖 鍮꾧탳</h2>
         </div>
         <div id="advancedCompareBody" class="compare-cards">
-          <div class="compare-loading">鍮꾧탳 ?듦퀎 怨꾩궛 以?/div>
+          <div class="compare-loading">비교 지표 계산 중...</div>
         </div>
       </div>
     </section>
