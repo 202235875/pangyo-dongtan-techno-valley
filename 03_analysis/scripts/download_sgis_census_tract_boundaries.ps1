@@ -1,6 +1,6 @@
 param(
   [string]$EnvPath = ".env",
-  [string]$OutDir = "data/raw/sgis/census_tract_boundaries"
+  [string]$OutDir = "02_data/raw/sgis/census_tract_boundaries"
 )
 
 $ErrorActionPreference = "Stop"
@@ -91,8 +91,8 @@ $envValues = Read-DotEnv -Path $EnvPath
 $token = Get-SgisToken -Env $envValues
 
 $summary = @()
-$summary += Download-UserAreaStatsArea -Token $token -Name "pangyo_phase1" -Bbox (Get-BboxFromGeoJson -Path "data/processed/boundaries/pangyo_phase1_boundary.geojson") -OutDir $OutDir
-$summary += Download-UserAreaStatsArea -Token $token -Name "dongtan_techno_valley" -Bbox (Get-BboxFromGeoJson -Path "data/processed/boundaries/dongtan_techno_valley_boundary.geojson") -OutDir $OutDir
+$summary += Download-UserAreaStatsArea -Token $token -Name "pangyo_phase1" -Bbox (Get-BboxFromGeoJson -Path "02_data/processed/boundaries/pangyo_phase1_boundary.geojson") -OutDir $OutDir
+$summary += Download-UserAreaStatsArea -Token $token -Name "dongtan_techno_valley" -Bbox (Get-BboxFromGeoJson -Path "02_data/processed/boundaries/dongtan_techno_valley_boundary.geojson") -OutDir $OutDir
 
 $metadata = @{
   collected_at = (Get-Date).ToString("s")

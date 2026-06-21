@@ -1,5 +1,5 @@
 param(
-  [string]$OutDir = "data/raw/osm",
+  [string]$OutDir = "02_data/raw/osm",
   [string]$Endpoint = "https://overpass.kumi.systems/api/interpreter"
 )
 

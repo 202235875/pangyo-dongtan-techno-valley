@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg: #f3f5f7;
   --panel: #ffffff;
   --ink: #14202b;
@@ -428,7 +428,7 @@ h2 { font-size: 16px; }
   margin-bottom: 10px;
 }
 
-/* ── Area section: map + stats panel side by side ── */
+/* ?? Area section: map + stats panel side by side ?? */
 .area-section {
   background: var(--panel);
   border: 1px solid var(--line);
@@ -462,7 +462,7 @@ h2 { font-size: 16px; }
   flex-direction: column;
 }
 
-/* ── Stats panel ── */
+/* ?? Stats panel ?? */
 .stats-panel {
   display: none;
   padding: 14px 14px;
@@ -505,7 +505,7 @@ h2 { font-size: 16px; }
   margin-top: -4px;
 }
 
-/* ── Use-type table ── */
+/* ?? Use-type table ?? */
 .use-table {
   width: 100%;
   border-collapse: collapse;
@@ -546,7 +546,7 @@ h2 { font-size: 16px; }
   vertical-align: middle;
 }
 
-/* ── Building popup ── */
+/* ?? Building popup ?? */
 .bld-popup { font-size: 13px; min-width: 190px; }
 .bld-name  { font-weight: 700; margin-bottom: 6px; font-size: 14px; }
 .bld-row   { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 2px 0; font-size: 12px; }
@@ -904,7 +904,7 @@ h2 { font-size: 16px; }
   flex-shrink: 0;
 }
 
-/* ── Map mode switcher (above the side-by-side maps) ── */
+/* ?? Map mode switcher (above the side-by-side maps) ?? */
 .mode-bar-row {
   align-items: center;
   display: flex;
@@ -949,7 +949,7 @@ h2 { font-size: 16px; }
   margin-right: 4px;
 }
 
-/* ── Side-by-side map comparison grid ── */
+/* ?? Side-by-side map comparison grid ?? */
 .compare-grid {
   display: grid;
   gap: 16px;

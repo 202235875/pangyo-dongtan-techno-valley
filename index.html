@@ -1,22 +1,22 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>판교 · 동탄 비교분석 시스템</title>
+  <title>?먭탳 쨌 ?숉깂 鍮꾧탳遺꾩꽍 ?쒖뒪??/title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="./styles.css?v=20260621-2" />
+  <link rel="stylesheet" href="./04_system/web/styles.css?v=20260621-5" />
   <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script defer src="https://unpkg.com/shpjs@6.2.0/dist/shp.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
-  <script defer src="./app.js?v=20260621-4"></script>
+  <script defer src="./04_system/web/app.js?v=20260621-5"></script>
 </head>
 <body>
   <header class="topbar">
     <div>
       <div class="eyebrow">analysis system</div>
-      <h1>판교 테크노밸리 · 동탄 테크노밸리 비교분석</h1>
+      <h1>?먭탳 ?뚰겕?몃갭由?쨌 ?숉깂 ?뚰겕?몃갭由?鍮꾧탳遺꾩꽍</h1>
     </div>
     <div class="topbar-meta">
       <span id="generatedAt">loading</span>
@@ -26,33 +26,33 @@
 
   <main class="shell">
 
-    <!-- ── 지도 모드 전환 (두 지도 동시 적용) ──────────────────────────────── -->
+    <!-- ?? 吏??紐⑤뱶 ?꾪솚 (??吏???숈떆 ?곸슜) ???????????????????????????????? -->
     <div class="mode-bar panel">
       <div class="mode-bar-row">
-        <span class="mode-bar-label">지도 모드</span>
+        <span class="mode-bar-label">吏??紐⑤뱶</span>
         <div class="mode-buttons">
-          <button type="button" class="toggle active" data-mode="building_use">건물 주용도</button>
-          <button type="button" class="toggle" data-mode="landuse">용도지역</button>
-          <button type="button" class="toggle" data-mode="population">인구 (집계구)</button>
-          <button type="button" class="toggle" data-mode="workers">종사자 (집계구)</button>
-          <button type="button" class="toggle" data-mode="isochrone">등시간권</button>
+          <button type="button" class="toggle active" data-mode="building_use">嫄대Ъ 二쇱슜??/button>
+          <button type="button" class="toggle" data-mode="landuse">?⑸룄吏??/button>
+          <button type="button" class="toggle" data-mode="population">?멸뎄 (吏묎퀎援?</button>
+          <button type="button" class="toggle" data-mode="workers">醫낆궗??(吏묎퀎援?</button>
+          <button type="button" class="toggle" data-mode="isochrone">?깆떆媛꾧텒</button>
         </div>
       </div>
       <div id="modeLegend" class="mode-legend"></div>
     </div>
 
-    <!-- ── 판교 · 동탄 지도 (한눈에 비교) ──────────────────────────────────── -->
+    <!-- ?? ?먭탳 쨌 ?숉깂 吏??(?쒕늿??鍮꾧탳) ???????????????????????????????????? -->
     <div class="compare-grid">
       <section class="area-section">
         <div class="area-head">
           <div class="area-head-left">
-            <h2 id="pangyoTitle">제1 판교테크노밸리</h2>
+            <h2 id="pangyoTitle">?? ?먭탳?뚰겕?몃갭由?/h2>
             <p id="pangyoMeta"></p>
           </div>
           <div class="layer-buttons" data-map="pangyo">
-            <button data-layer="boundary" class="toggle active">경계</button>
-            <button data-layer="parcels"  class="toggle">필지</button>
-            <button data-layer="roads"    class="toggle active">도로</button>
+            <button data-layer="boundary" class="toggle active">寃쎄퀎</button>
+            <button data-layer="parcels"  class="toggle">?꾩?</button>
+            <button data-layer="roads"    class="toggle active">?꾨줈</button>
           </div>
         </div>
         <div class="area-body">
@@ -61,7 +61,7 @@
             <div class="map-footer" id="pangyoFoot"></div>
           </div>
           <div class="stats-panel" id="pangyoStatsPanel">
-            <div class="stats-loading">통계 로딩 중…</div>
+            <div class="stats-loading">?듦퀎 濡쒕뵫 以묅?/div>
           </div>
         </div>
       </section>
@@ -69,13 +69,13 @@
       <section class="area-section">
         <div class="area-head">
           <div class="area-head-left">
-            <h2 id="dongtanTitle">동탄 테크노밸리</h2>
+            <h2 id="dongtanTitle">?숉깂 ?뚰겕?몃갭由?/h2>
             <p id="dongtanMeta"></p>
           </div>
           <div class="layer-buttons" data-map="dongtan">
-            <button data-layer="boundary" class="toggle active">경계</button>
-            <button data-layer="parcels"  class="toggle">필지</button>
-            <button data-layer="roads"    class="toggle active">도로</button>
+            <button data-layer="boundary" class="toggle active">寃쎄퀎</button>
+            <button data-layer="parcels"  class="toggle">?꾩?</button>
+            <button data-layer="roads"    class="toggle active">?꾨줈</button>
           </div>
         </div>
         <div class="area-body">
@@ -84,20 +84,20 @@
             <div class="map-footer" id="dongtanFoot"></div>
           </div>
           <div class="stats-panel" id="dongtanStatsPanel">
-            <div class="stats-loading">통계 로딩 중…</div>
+            <div class="stats-loading">?듦퀎 濡쒕뵫 以묅?/div>
           </div>
         </div>
       </section>
     </div>
 
-    <!-- ── Bottom: compare table ─────────────────────────────────────────── -->
+    <!-- ?? Bottom: compare table ??????????????????????????????????????????? -->
     <section class="advanced-compare-section">
       <div class="panel advanced-compare-panel">
         <div class="panel-header">
-          <h2>핵심 비교</h2>
+          <h2>?듭떖 鍮꾧탳</h2>
         </div>
         <div id="advancedCompareBody" class="compare-cards">
-          <div class="compare-loading">비교 통계 계산 중</div>
+          <div class="compare-loading">鍮꾧탳 ?듦퀎 怨꾩궛 以?/div>
         </div>
       </div>
     </section>

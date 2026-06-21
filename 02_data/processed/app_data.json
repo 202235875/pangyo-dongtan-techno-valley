@@ -6,7 +6,7 @@
       "label": "Pangyo Techno Valley Phase 1",
       "core_station": "Pangyo",
       "boundary": {
-        "geojson": "data/processed/boundaries/pangyo_phase1_boundary.geojson",
+        "geojson": "02_data/processed/boundaries/pangyo_phase1_boundary.geojson",
         "centroid": [
           127.10504234919607,
           37.40306900333146
@@ -21,8 +21,8 @@
         "note": "Boundary replaced with user-provided REALPANGYO GeoJSON feature 2."
       },
       "sgis": {
-        "shp_zip": "data/raw/sgis/census_tract_shp/bnd_oa_31023_2025_2Q.zip",
-        "tract_stats": "data/processed/sgis/pangyo_phase1_tract_stats.json",
+        "shp_zip": "02_data/raw/sgis/census_tract_shp/bnd_oa_31023_2025_2Q.zip",
+        "tract_stats": "02_data/processed/sgis/pangyo_phase1_tract_stats.json",
         "clipped": {
           "tract_count": 4,
           "population": 312,
@@ -1440,24 +1440,24 @@
       "vworld": {
         "parcels": {
           "count": 159,
-          "geojson": "data/processed/vworld/pangyo_phase1_parcels.geojson"
+          "geojson": "02_data/processed/vworld/pangyo_phase1_parcels.geojson"
         },
         "buildings": {
           "count": 100,
-          "geojson": "data/processed/vworld/pangyo_phase1_buildings.geojson"
+          "geojson": "02_data/processed/vworld/pangyo_phase1_buildings.geojson"
         },
         "landuse": {
           "count": 8,
-          "geojson": "data/processed/vworld/pangyo_phase1_landuse.geojson"
+          "geojson": "02_data/processed/vworld/pangyo_phase1_landuse.geojson"
         },
         "roads": {
           "count": 111,
-          "geojson": "data/processed/osm/pangyo_phase1_roads.geojson"
+          "geojson": "02_data/processed/osm/pangyo_phase1_roads.geojson"
         }
       },
       "business_points": {
-        "file": "data/processed/business/pangyo_phase1_stores.json",
-        "source": "data/raw/business/소상공인시장진흥공단_상가(상권)정보_경기_202603.csv",
+        "file": "02_data/processed/business/pangyo_phase1_stores.json",
+        "source": "02_data/raw/business/소상공인시장진흥공단_상가(상권)정보_경기_202603.csv",
         "method": "point_in_boundary",
         "count": 1007,
         "by_large_category": [
@@ -1559,7 +1559,7 @@
       "label": "Dongtan Techno Valley",
       "core_station": "Dongtan",
       "boundary": {
-        "geojson": "data/processed/boundaries/dongtan_techno_valley_boundary.geojson",
+        "geojson": "02_data/processed/boundaries/dongtan_techno_valley_boundary.geojson",
         "centroid": [
           127.09760737954156,
           37.21453982459609
@@ -1574,8 +1574,8 @@
         "note": "Boundary replaced with user-provided Dongtan Techno Valley GeoJSON."
       },
       "sgis": {
-        "shp_zip": "data/raw/sgis/census_tract_shp/bnd_oa_31240_2025_2Q.zip",
-        "tract_stats": "data/processed/sgis/dongtan_techno_valley_tract_stats.json",
+        "shp_zip": "02_data/raw/sgis/census_tract_shp/bnd_oa_31240_2025_2Q.zip",
+        "tract_stats": "02_data/processed/sgis/dongtan_techno_valley_tract_stats.json",
         "clipped": {
           "tract_count": 8,
           "population": 530,
@@ -3017,24 +3017,24 @@
       "vworld": {
         "parcels": {
           "count": 618,
-          "geojson": "data/processed/vworld/dongtan_techno_valley_parcels.geojson"
+          "geojson": "02_data/processed/vworld/dongtan_techno_valley_parcels.geojson"
         },
         "buildings": {
           "count": 204,
-          "geojson": "data/processed/vworld/dongtan_techno_valley_buildings.geojson"
+          "geojson": "02_data/processed/vworld/dongtan_techno_valley_buildings.geojson"
         },
         "landuse": {
           "count": 20,
-          "geojson": "data/processed/vworld/dongtan_techno_valley_landuse.geojson"
+          "geojson": "02_data/processed/vworld/dongtan_techno_valley_landuse.geojson"
         },
         "roads": {
           "count": 171,
-          "geojson": "data/processed/osm/dongtan_techno_valley_roads.geojson"
+          "geojson": "02_data/processed/osm/dongtan_techno_valley_roads.geojson"
         }
       },
       "business_points": {
-        "file": "data/processed/business/dongtan_techno_valley_stores.json",
-        "source": "data/raw/business/소상공인시장진흥공단_상가(상권)정보_경기_202603.csv",
+        "file": "02_data/processed/business/dongtan_techno_valley_stores.json",
+        "source": "02_data/raw/business/소상공인시장진흥공단_상가(상권)정보_경기_202603.csv",
         "method": "point_in_boundary",
         "count": 2465,
         "by_large_category": [
@@ -3133,10 +3133,10 @@
     }
   },
   "isochrone_sgis": {
-    "tract_stats": "data/processed/sgis/isochrone_tract_stats.json",
+    "tract_stats": "02_data/processed/sgis/isochrone_tract_stats.json",
     "shp_zips": [
-      "data/raw/sgis/census_tract_shp/bnd_oa_31023_2025_2Q.zip",
-      "data/raw/sgis/census_tract_shp/bnd_oa_31240_2025_2Q.zip"
+      "02_data/raw/sgis/census_tract_shp/bnd_oa_31023_2025_2Q.zip",
+      "02_data/raw/sgis/census_tract_shp/bnd_oa_31240_2025_2Q.zip"
     ],
     "scope": [
       "31023",
@@ -3145,14 +3145,14 @@
     "note": "Current local SGIS scope contains Seongnam-si and Hwaseong-si only; Seoul and full Gyeonggi tracts are not included."
   },
   "sources": {
-    "boundaries": "data/processed/boundaries/*.geojson",
-    "sgis_shp": "data/raw/sgis/census_tract_shp/*.zip",
-    "sgis_stats": "data/raw/sgis/census_tract_stats/*/*.csv",
-    "vworld": "data/raw/vworld/*/*.json",
-    "osm": "data/raw/osm/*.json",
-    "business_points": "data/raw/business/소상공인시장진흥공단_상가(상권)정보_경기_202603.csv",
-    "buildings": "data/raw/building_registry_manual/*.csv",
-    "subway": "data/raw/subway/subway_network.zip"
+    "boundaries": "02_data/processed/boundaries/*.geojson",
+    "sgis_shp": "02_data/raw/sgis/census_tract_shp/*.zip",
+    "sgis_stats": "02_data/raw/sgis/census_tract_stats/*/*.csv",
+    "vworld": "02_data/raw/vworld/*/*.json",
+    "osm": "02_data/raw/osm/*.json",
+    "business_points": "02_data/raw/business/소상공인시장진흥공단_상가(상권)정보_경기_202603.csv",
+    "buildings": "02_data/raw/building_registry_manual/*.csv",
+    "subway": "02_data/raw/subway/subway_network.zip"
   },
   "notes": {
     "dongtan_evidence": "Required later for report writing. This system build only prepares the analysis dataset and map UI."

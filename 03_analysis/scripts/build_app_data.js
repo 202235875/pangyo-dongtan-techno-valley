@@ -1229,7 +1229,7 @@ async function buildBusinessPointStats(boundariesByKey) {
   }));
 
   for (const { key } of entries) {
-    stats[key] = emptyBusinessPointStats("data/raw/business/소상공인시장진흥공단_상가(상권)정보_경기_202603.csv");
+    stats[key] = emptyBusinessPointStats("02_data/raw/business/소상공인시장진흥공단_상가(상권)정보_경기_202603.csv");
     stats[key]._large = new Map();
     stats[key]._middle = new Map();
   }
@@ -1344,15 +1344,15 @@ function buildAreaSummary(areaKey, config, tractStats) {
     label: config.label,
     core_station: config.coreStation,
     boundary: {
-      geojson: `data/processed/boundaries/${config.boundaryFile}`,
+      geojson: `02_data/processed/boundaries/${config.boundaryFile}`,
       centroid: metrics.centroid,
       bbox: metrics.bbox,
       area_m2: metrics.area_m2,
       note: boundary.properties?.note || "",
     },
     sgis: {
-      shp_zip: `data/raw/sgis/census_tract_shp/${config.shpZip}.zip`,
-      tract_stats: `data/processed/sgis/${areaKey}_tract_stats.json`,
+      shp_zip: `02_data/raw/sgis/census_tract_shp/${config.shpZip}.zip`,
+      tract_stats: `02_data/processed/sgis/${areaKey}_tract_stats.json`,
       clipped: {
         tract_count: tractStats.tract_count,
         population: tractStats.totals.population,
@@ -1370,19 +1370,19 @@ function buildAreaSummary(areaKey, config, tractStats) {
     vworld: {
       parcels: {
         count: parcels.length,
-        geojson: `data/processed/vworld/${areaKey}_parcels.geojson`,
+        geojson: `02_data/processed/vworld/${areaKey}_parcels.geojson`,
       },
       buildings: {
         count: buildings.length,
-        geojson: `data/processed/vworld/${areaKey}_buildings.geojson`,
+        geojson: `02_data/processed/vworld/${areaKey}_buildings.geojson`,
       },
       landuse: {
         count: landuse.length,
-        geojson: `data/processed/vworld/${areaKey}_landuse.geojson`,
+        geojson: `02_data/processed/vworld/${areaKey}_landuse.geojson`,
       },
       roads: {
         count: roadFeatures.length,
-        geojson: `data/processed/osm/${areaKey}_roads.geojson`,
+        geojson: `02_data/processed/osm/${areaKey}_roads.geojson`,
       },
     },
   };
@@ -1495,7 +1495,7 @@ async function build() {
     writeJson(path.join(PROCESSED, "business", `${key}_stores.json`), stats);
     if (areaSummaries[key]) {
       areaSummaries[key].business_points = {
-        file: `data/processed/business/${key}_stores.json`,
+        file: `02_data/processed/business/${key}_stores.json`,
         source: stats.source,
         method: stats.method,
         count: stats.count,
@@ -1520,23 +1520,23 @@ async function build() {
     generated_at: new Date().toISOString(),
     areas: areaSummaries,
     isochrone_sgis: {
-      tract_stats: "data/processed/sgis/isochrone_tract_stats.json",
+      tract_stats: "02_data/processed/sgis/isochrone_tract_stats.json",
       shp_zips: [
-        "data/raw/sgis/census_tract_shp/bnd_oa_31023_2025_2Q.zip",
-        "data/raw/sgis/census_tract_shp/bnd_oa_31240_2025_2Q.zip",
+        "02_data/raw/sgis/census_tract_shp/bnd_oa_31023_2025_2Q.zip",
+        "02_data/raw/sgis/census_tract_shp/bnd_oa_31240_2025_2Q.zip",
       ],
       scope: ["31023", "31240"],
       note: "Current local SGIS scope contains Seongnam-si and Hwaseong-si only; Seoul and full Gyeonggi tracts are not included.",
     },
     sources: {
-      boundaries: "data/processed/boundaries/*.geojson",
-      sgis_shp: "data/raw/sgis/census_tract_shp/*.zip",
-      sgis_stats: "data/raw/sgis/census_tract_stats/*/*.csv",
-      vworld: "data/raw/vworld/*/*.json",
-      osm: "data/raw/osm/*.json",
-      business_points: "data/raw/business/소상공인시장진흥공단_상가(상권)정보_경기_202603.csv",
-      buildings: "data/raw/building_registry_manual/*.csv",
-      subway: "data/raw/subway/subway_network.zip",
+      boundaries: "02_data/processed/boundaries/*.geojson",
+      sgis_shp: "02_data/raw/sgis/census_tract_shp/*.zip",
+      sgis_stats: "02_data/raw/sgis/census_tract_stats/*/*.csv",
+      vworld: "02_data/raw/vworld/*/*.json",
+      osm: "02_data/raw/osm/*.json",
+      business_points: "02_data/raw/business/소상공인시장진흥공단_상가(상권)정보_경기_202603.csv",
+      buildings: "02_data/raw/building_registry_manual/*.csv",
+      subway: "02_data/raw/subway/subway_network.zip",
     },
     notes: {
       dongtan_evidence: "Required later for report writing. This system build only prepares the analysis dataset and map UI.",
@@ -1544,7 +1544,7 @@ async function build() {
   };
 
   writeJson(path.join(PROCESSED, "app_data.json"), appData);
-  console.log("Wrote data/processed/app_data.json");
+  console.log("Wrote 02_data/processed/app_data.json");
 }
 
 build().catch((error) => {

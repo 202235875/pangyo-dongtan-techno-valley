@@ -4,7 +4,7 @@ const inputPath = process.argv[2];
 const outputPath = process.argv[3];
 
 if (!inputPath || !outputPath) {
-  console.error("Usage: node scripts/convert_epsg5179_to_wgs84.js input.geojson output.geojson");
+  console.error("Usage: node 03_analysis/scripts/convert_epsg5179_to_wgs84.js input.geojson output.geojson");
   process.exit(1);
 }
 

@@ -53,7 +53,7 @@ function Get-SgisToken {
 function Download-Sgis {
   param([hashtable]$Env)
 
-  New-Dir "data/raw/sgis"
+  New-Dir "02_data/raw/sgis"
   $token = Get-SgisToken -Env $Env
 
   $calls = @(
@@ -65,7 +65,7 @@ function Download-Sgis {
 
   foreach ($call in $calls) {
     $data = Invoke-Json -Uri $call.url
-    Save-Json -Object $data -Path "data/raw/sgis/$($call.name).json"
+    Save-Json -Object $data -Path "02_data/raw/sgis/$($call.name).json"
   }
 
   Save-Json -Object @{
@@ -73,7 +73,7 @@ function Download-Sgis {
     source = "SGIS OpenAPI3"
     note = "Keys are read from .env and are not stored in this metadata."
     files = $calls.name
-  } -Path "data/raw/sgis/collection_metadata.json"
+  } -Path "02_data/raw/sgis/collection_metadata.json"
 }
 
 function Download-VWorldLayer {
@@ -85,7 +85,7 @@ function Download-VWorldLayer {
     [int]$PageSize
   )
 
-  $outDir = "data/raw/vworld/$AreaKey/$Layer"
+  $outDir = "02_data/raw/vworld/$AreaKey/$Layer"
   New-Dir $outDir
 
   $minLat = $Bbox[0]
@@ -160,7 +160,7 @@ function Download-VWorldLayer {
 function Download-VWorld {
   param([hashtable]$Env, [object]$Areas, [int]$PageSize)
 
-  New-Dir "data/raw/vworld"
+  New-Dir "02_data/raw/vworld"
   $layers = @(
     "LP_PA_CBND_BUBUN",
     "LT_C_SPBD",
@@ -184,7 +184,7 @@ function Download-VWorld {
     source = "VWorld 2D Data API"
     layers = $layers
     summary = $summary
-  } -Path "data/raw/vworld/collection_metadata.json"
+  } -Path "02_data/raw/vworld/collection_metadata.json"
 }
 
 function Get-PnuFromFeature {
@@ -203,17 +203,17 @@ function Get-PnuFromFeature {
 function Download-BuildingRegistry {
   param([hashtable]$Env, [object]$Areas, [int]$MaxParcels)
 
-  New-Dir "data/raw/building_registry"
+  New-Dir "02_data/raw/building_registry"
   $summary = @()
 
   foreach ($areaName in $Areas.PSObject.Properties.Name) {
-    $parcelDir = "data/raw/vworld/$areaName/LP_PA_CBND_BUBUN"
+    $parcelDir = "02_data/raw/vworld/$areaName/LP_PA_CBND_BUBUN"
     if (!(Test-Path $parcelDir)) {
       $summary += [pscustomobject]@{ area = $areaName; status = "skipped"; reason = "missing VWorld parcel directory"; parcel_count = 0; saved_count = 0 }
       continue
     }
 
-    $areaOut = "data/raw/building_registry/$areaName"
+    $areaOut = "02_data/raw/building_registry/$areaName"
     New-Dir $areaOut
     $pnus = @(Get-ChildItem -Path $parcelDir -Filter *.json | ForEach-Object {
       $rawText = Get-Content -Raw -Path $_.FullName
@@ -269,7 +269,7 @@ function Download-BuildingRegistry {
     source = "data.go.kr BldRgstService_v2 getBrTitleInfo"
     note = "Queried by PNU values derived from VWorld parcel polygons."
     summary = $summary
-  } -Path "data/raw/building_registry/collection_metadata.json"
+  } -Path "02_data/raw/building_registry/collection_metadata.json"
 }
 
 $envValues = Read-DotEnv -Path $EnvPath
@@ -279,7 +279,7 @@ foreach ($required in @("SGIS_CONSUMER_KEY", "SGIS_CONSUMER_SECRET", "VWORLD_KEY
   }
 }
 
-$areas = (Get-Content -Raw -Path "data/metadata/analysis_areas.json" | ConvertFrom-Json).areas
+$areas = (Get-Content -Raw -Path "02_data/metadata/analysis_areas.json" | ConvertFrom-Json).areas
 
 if (!$SkipSgis) {
   Download-Sgis -Env $envValues
@@ -294,6 +294,6 @@ if (!$SkipBuildingRegistry) {
 Save-Json -Object @{
   collected_at = (Get-Date).ToString("s")
   note = "Project raw data collection completed. API keys were read from .env and not written to output files."
-} -Path "data/raw/collection_metadata.json"
+} -Path "02_data/raw/collection_metadata.json"
 
-Write-Host "Collection complete. See data/raw."
+Write-Host "Collection complete. See 02_data/raw."

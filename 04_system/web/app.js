@@ -150,7 +150,7 @@ function isSubwayRowInService(row) {
 async function loadSubwayNetwork() {
   if (state.subway) return state.subway;
 
-  const buffer = await fetch("data/raw/subway/subway_network.zip").then((r) =>
+  const buffer = await fetch("02_data/raw/subway/subway_network.zip").then((r) =>
     r.arrayBuffer()
   );
   const zip = await JSZip.loadAsync(buffer);
@@ -274,11 +274,11 @@ async function loadTractsForIsochrone(areaKey) {
   if (state.isochroneTracts[cacheKey]) return state.isochroneTracts[cacheKey];
 
   const scope = state.data.isochrone_sgis || {};
-  const stats = await loadJson(scope.tract_stats || "data/processed/sgis/isochrone_tract_stats.json");
+  const stats = await loadJson(scope.tract_stats || "02_data/processed/sgis/isochrone_tract_stats.json");
   const statByTract = new Map(stats.tracts.map((row) => [row.tract, row]));
   const shpZips = scope.shp_zips || [
-    "data/raw/sgis/census_tract_shp/bnd_oa_31023_2025_2Q.zip",
-    "data/raw/sgis/census_tract_shp/bnd_oa_31240_2025_2Q.zip",
+    "02_data/raw/sgis/census_tract_shp/bnd_oa_31023_2025_2Q.zip",
+    "02_data/raw/sgis/census_tract_shp/bnd_oa_31240_2025_2Q.zip",
   ];
   const geojsons = await Promise.all(shpZips.map((zipPath) => loadShpCached(zipPath)));
   const features = geojsons.flatMap((result) => {
@@ -1097,7 +1097,7 @@ async function loadArea(areaKey) {
   fitBoundary(map, boundary);
 
   const buildingStats = await loadJson(
-    `data/processed/stats/${areaKey}_building_stats.json`
+    `02_data/processed/stats/${areaKey}_building_stats.json`
   );
   renderUsageStats(areaKey, buildingStats);
 
@@ -1213,8 +1213,8 @@ async function landuseCompareStats(areaKey) {
 
 async function buildingCompareStats(areaKey) {
   const [stats, buildings] = await Promise.all([
-    loadJson(`data/processed/stats/${areaKey}_building_stats.json`),
-    loadJson(`data/processed/vworld/${areaKey}_buildings_enriched.geojson`),
+    loadJson(`02_data/processed/stats/${areaKey}_building_stats.json`),
+    loadJson(`02_data/processed/vworld/${areaKey}_buildings_enriched.geojson`),
   ]);
   const valid = (buildings.features || [])
     .map((feature) => feature.properties || {})
@@ -1367,11 +1367,11 @@ function shareComparisonChart(pangyoItems, dongtanItems, title) {
 }
 
 async function industryWorkerStats(areaKey) {
-  return loadJson(`data/processed/stats/${areaKey}_industry_workers.json`);
+  return loadJson(`02_data/processed/stats/${areaKey}_industry_workers.json`);
 }
 
 async function completionTimelineStats(areaKey) {
-  return loadJson(`data/processed/stats/${areaKey}_completion_timeline.json`);
+  return loadJson(`02_data/processed/stats/${areaKey}_completion_timeline.json`);
 }
 
 function renderCompletionTimelineSvg(pangyoYears = [], dongtanYears = []) {
@@ -1745,7 +1745,7 @@ async function renderCompareTable() {
 }
 
 async function main() {
-  state.data = await loadJson("data/processed/app_data.json");
+  state.data = await loadJson("02_data/processed/app_data.json");
   document.getElementById("generatedAt").textContent = state.data.generated_at;
   document.getElementById("dataStatus").textContent  = "processed data ready";
 
