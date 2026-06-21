@@ -120,4 +120,4 @@ node 03_analysis/scripts/build_app_data.js
 05_report/
 ```
 
-과제 원본 프롬프트와 검증용 export 파일을 보관합니다.
+검증용 export 파일을 보관합니다.
