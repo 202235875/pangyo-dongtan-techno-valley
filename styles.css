@@ -387,6 +387,21 @@ h2 { font-size: 16px; }
   grid-template-columns: 28px minmax(60px, 1fr) 44px;
 }
 
+.floor-area-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 10px;
+}
+
+.floor-area-table {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  min-width: 0;
+  padding: 10px;
+}
+
 .station-detail-grid {
   display: grid;
   gap: 10px;
@@ -454,21 +469,20 @@ h2 { font-size: 16px; }
 
 .area-body {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 290px;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .area-map-wrap {
-  border-right: 1px solid var(--line);
   display: flex;
   flex-direction: column;
 }
 
 /* ── Stats panel ── */
 .stats-panel {
+  display: none;
   padding: 14px 14px;
   overflow-y: auto;
   max-height: 660px;
-  display: flex;
   flex-direction: column;
   gap: 10px;
 }
@@ -665,6 +679,10 @@ h2 { font-size: 16px; }
   line-height: 1.4;
   margin: 0 0 8px 8px;
   padding: 10px 12px;
+}
+
+.is-hidden {
+  display: none !important;
 }
 
 .iso-stat-head {
@@ -977,6 +995,9 @@ h2 { font-size: 16px; }
     grid-template-columns: 1fr;
   }
   .access-inline-grid {
+    grid-template-columns: 1fr;
+  }
+  .floor-area-grid {
     grid-template-columns: 1fr;
   }
   .compare-detail {

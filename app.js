@@ -5,6 +5,7 @@ const state = {
   metrics: {},
   subway: null,
   isochrones: {},
+  isochroneControls: {},
   isochroneStats: {},
   isochroneTracts: {},
   modeContext: {},
@@ -471,7 +472,9 @@ function addIsochroneStatsPanel(map, areaKey) {
   const control = L.control({ position: "bottomleft" });
   control.onAdd = () => {
     const div = L.DomUtil.create("div", "isochrone-stats");
+    div.classList.add("is-hidden");
     state.isochroneStats[areaKey] = {
+      ...(state.isochroneStats[areaKey] || {}),
       panel: div,
       values: state.isochroneStats[areaKey]?.values || {},
     };
@@ -519,7 +522,7 @@ async function showSubwayIsochrone(map, areaKey, minutes, controls = {}) {
           },
         });
 
-        layer.addTo(map);
+        if (state.currentMode === "isochrone") layer.addTo(map);
         state.isochrones[config.layerKey] = layer;
       }
     }
@@ -559,6 +562,7 @@ function addIsochroneControl(map, areaKey) {
   const control = L.control({ position: "topright" });
   control.onAdd = () => {
     const div = L.DomUtil.create("div", "isochrone-control");
+    div.classList.add("is-hidden");
     div.innerHTML = `
       <div class="iso-control-buttons">
         <button type="button" data-minutes="30">30분권</button>
@@ -577,6 +581,7 @@ function addIsochroneControl(map, areaKey) {
     const valueLabel = div.querySelector(".iso-slider-value");
     const summary = div.querySelector(".iso-slider-summary");
     const controls = { buttons, range, valueLabel, summary };
+    state.isochroneControls[areaKey] = { container: div, controls, initialized: false };
     let sliderTimer = null;
     buttons.forEach((button) => {
       button.addEventListener("click", () => {
@@ -593,10 +598,33 @@ function addIsochroneControl(map, areaKey) {
     });
     L.DomEvent.disableClickPropagation(div);
     L.DomEvent.disableScrollPropagation(div);
-    setTimeout(() => showSubwayIsochrone(map, areaKey, 30, controls), 0);
     return div;
   };
   control.addTo(map);
+}
+
+function setIsochroneModeActive(areaKey, active) {
+  const ctx = state.modeContext[areaKey];
+  const config = ISOCHRONE_CONFIGS[areaKey];
+  const controlState = state.isochroneControls[areaKey];
+  const statsPanel = state.isochroneStats[areaKey]?.panel;
+
+  controlState?.container?.classList.toggle("is-hidden", !active);
+  statsPanel?.classList.toggle("is-hidden", !active);
+
+  if (!ctx || !config) return;
+
+  const layer = state.isochrones[config.layerKey];
+  if (!active) {
+    if (layer && ctx.map.hasLayer(layer)) ctx.map.removeLayer(layer);
+    return;
+  }
+
+  if (layer && !ctx.map.hasLayer(layer)) layer.addTo(ctx.map);
+  if (controlState && !controlState.initialized) {
+    controlState.initialized = true;
+    setTimeout(() => showSubwayIsochrone(ctx.map, areaKey, 30, controlState.controls), 0);
+  }
 }
 
 function makeMap(id, center) {
@@ -840,6 +868,7 @@ async function ensureModeLayer(areaKey, mode) {
   const ctx = state.modeContext[areaKey];
   if (!ctx) return null;
   const cache = state.modeLayers[areaKey];
+  if (mode === "isochrone") return null;
   if (mode === "building_use") return cache.building_use;
   if (mode === "landuse") {
     if (!cache.landuse) {
@@ -860,6 +889,7 @@ async function setMapMode(mode) {
   try {
     for (const areaKey of Object.keys(state.modeContext)) {
       const ctx = state.modeContext[areaKey];
+      setIsochroneModeActive(areaKey, mode === "isochrone");
       const layer = await ensureModeLayer(areaKey, mode);
       const current = state.activeModeLayer[areaKey];
       if (current && ctx.map.hasLayer(current)) ctx.map.removeLayer(current);
@@ -897,6 +927,15 @@ function renderModeLegend(mode) {
       .map(([label, color]) => `<span><i class="swatch" style="background:${color}"></i>${label}</span>`)
       .join("");
     el.innerHTML = `${entries}<span><i class="swatch" style="background:${LANDUSE_FALLBACK_COLOR}"></i>기타/미분류</span>`;
+    return;
+  }
+
+  if (mode === "isochrone") {
+    el.innerHTML = `
+      <span class="legend-title">등시간권</span>
+      <span><i class="swatch" style="background:#2f80ed"></i>30분권</span>
+      <span><i class="swatch" style="background:#7b61ff"></i>60분권</span>
+    `;
     return;
   }
 
@@ -1336,6 +1375,35 @@ function shareComparisonChart(pangyoItems, dongtanItems, title) {
   `;
 }
 
+function floorAreaTableHtml(title, items) {
+  const rows = (items || []).slice(0, 8).map((item) => `
+    <tr>
+      <td>${item.label}</td>
+      <td class="num-cell">${fmt(item.floor)}㎡</td>
+      <td class="num-cell">${item.ratio.toFixed(1)}%</td>
+    </tr>
+  `).join("");
+  return `
+    <div class="floor-area-table">
+      <div class="detail-chart-title">${title}</div>
+      <table class="use-table">
+        <thead><tr><th>용도</th><th>연면적</th><th>비율</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+  `;
+}
+
+function floorAreaComparisonHtml(pBuild, dBuild) {
+  return `
+    ${shareComparisonChart(pBuild.byUse, dBuild.byUse, "주용도별 연면적 비율 비교")}
+    <div class="floor-area-grid">
+      ${floorAreaTableHtml("판교 용도별 연면적", pBuild.byUse)}
+      ${floorAreaTableHtml("동탄 용도별 연면적", dBuild.byUse)}
+    </div>
+  `;
+}
+
 async function industryWorkerStats(areaKey) {
   return loadJson(`data/processed/stats/${areaKey}_industry_workers.json`);
 }
@@ -1536,7 +1604,7 @@ async function renderCompareTable() {
         dongtan: miniShareBars(dBuild.byUse),
         detail: compareDetail(
           "건축물대장과 결합된 건물의 주용도별 연면적 비율입니다.",
-          shareComparisonChart(pBuild.byUse, dBuild.byUse, "주용도별 연면적 비율 비교")
+          floorAreaComparisonHtml(pBuild, dBuild)
         ),
       },
       {
