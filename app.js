@@ -1364,35 +1364,6 @@ function shareComparisonChart(pangyoItems, dongtanItems, title) {
   `;
 }
 
-function floorAreaTableHtml(title, items) {
-  const rows = (items || []).slice(0, 8).map((item) => `
-    <tr>
-      <td>${item.label}</td>
-      <td class="num-cell">${fmt(item.floor)}㎡</td>
-      <td class="num-cell">${item.ratio.toFixed(1)}%</td>
-    </tr>
-  `).join("");
-  return `
-    <div class="floor-area-table">
-      <div class="detail-chart-title">${title}</div>
-      <table class="use-table">
-        <thead><tr><th>용도</th><th>연면적</th><th>비율</th></tr></thead>
-        <tbody>${rows}</tbody>
-      </table>
-    </div>
-  `;
-}
-
-function floorAreaComparisonHtml(pBuild, dBuild) {
-  return `
-    ${shareComparisonChart(pBuild.byUse, dBuild.byUse, "주용도별 연면적 비율 비교")}
-    <div class="floor-area-grid">
-      ${floorAreaTableHtml("판교 용도별 연면적", pBuild.byUse)}
-      ${floorAreaTableHtml("동탄 용도별 연면적", dBuild.byUse)}
-    </div>
-  `;
-}
-
 async function industryWorkerStats(areaKey) {
   return loadJson(`data/processed/stats/${areaKey}_industry_workers.json`);
 }
@@ -1561,7 +1532,7 @@ async function renderCompareTable() {
   const jobHousingBars = compareDualBar(pJobHousing, dJobHousing, "", 2);
   const roadDensityBars = compareDualBar(pMetric.roadDensityKmPerKm2, dMetric.roadDensityKmPerKm2, "km/km²", 2);
   const cards = [
-    compareCard("3-0 개발 속도 (사용승인일 기준)", [
+    compareCard("1 개발 속도 (사용승인일 기준)", [
       {
         metric: "준공 집중도",
         pangyo: compareValue(
@@ -1586,14 +1557,14 @@ async function renderCompareTable() {
         ),
       },
     ]),
-    compareCard("3-1 토지이용·건축", [
+    compareCard("2 토지이용·건축", [
       {
         metric: "건축물 주용도 구성비",
         pangyo: miniShareBars(pBuild.byUse),
         dongtan: miniShareBars(dBuild.byUse),
         detail: compareDetail(
           "건축물대장과 결합된 건물의 주용도별 연면적 비율입니다.",
-          floorAreaComparisonHtml(pBuild, dBuild)
+          shareComparisonChart(pBuild.byUse, dBuild.byUse, "주용도별 연면적 비율 비교")
         ),
       },
       {
@@ -1651,7 +1622,7 @@ async function renderCompareTable() {
         ),
       },
     ]),
-    compareCard("3-2 등시간권", [
+    compareCard("3 등시간권", [
       {
         metric: "핵심역",
         pangyo: compareValue("판교역", "신분당선/경강선", "업무지구 중심부", "출처: 본인 정의"),
@@ -1692,7 +1663,7 @@ async function renderCompareTable() {
         ),
       },
     ]),
-    compareCard("3-3 인구사회", [
+    compareCard("4 인구사회", [
       {
         metric: "인구",
         pangyo: compareValue("상주인구", popBars.pangyo, "구역계 내 SGIS 집계구 총인구", "출처: SGIS 집계구"),
