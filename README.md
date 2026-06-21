@@ -7,7 +7,7 @@
 
 ## GitHub Pages
 
-- URL: _(저장소 생성 후 Settings → Pages에서 활성화하면 여기에 `https://<username>.github.io/<repo>/` 형태로 채워주세요)_
+- URL: https://202235875.github.io/pangyo-dongtan-techno-valley/
 
 ## 데이터 출처 / 기준월
 
